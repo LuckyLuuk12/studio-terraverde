@@ -10,7 +10,13 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "bundler"
-	}
+	},
+	"include": [
+		// Include TypeScript files in the src directory
+		"src/**/*.ts",
+		// Include TypeScript declaration files in the src directory
+		"src/**/*.d.ts"
+	]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	// except $lib which is handled by https://kit.svelte.dev/docs/configuration#files
 	//
