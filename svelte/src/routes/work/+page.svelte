@@ -10,7 +10,8 @@
   <Card title="Category 2" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat2}/>
   <Card title="Category 3" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat3}/>
   <Card title="Category 4" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat4}/>
-  <Card title="Category 4" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat4}/>
+  <Card title="Category 5" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat4}/>
+  <Card title="Category 6" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat4}/>
 </main>
 <style lang="scss">
 	@import '$lib/colors';
