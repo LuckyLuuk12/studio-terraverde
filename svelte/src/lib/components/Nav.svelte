@@ -5,9 +5,9 @@
 <nav>
 	<img src={favicon} alt="Company icon">
 	<a href="/">home</a>
-	<a href="/">work</a>
-	<a href="/">about me</a>
-	<a href="/">contact</a>
+	<a href="/work">work</a>
+	<a href="/about">about me</a>
+	<a href="/contact">contact</a>
 </nav>
 <div class="page">
 	<slot />
