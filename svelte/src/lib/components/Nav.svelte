@@ -6,7 +6,7 @@
 	<img src={favicon} alt="Company icon">
 	<a href="/">home</a>
 	<a href="/work">work</a>
-	<a href="/about">about me</a>
+	<a href="/about">about</a>
 	<a href="/contact">contact</a>
 </nav>
 <div class="page">
@@ -36,6 +36,7 @@
 			}
 		}
 		:first-child {
+			max-width: 30%;
 			padding-left: 0;
 		}
 	}
