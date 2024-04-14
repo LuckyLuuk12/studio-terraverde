@@ -13,12 +13,12 @@
   .card {
 		color: $light1;
 		margin: 2rem;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		overflow: clip;
 		position: relative;
 		height: 30rem;
 		width: 20rem;
-		border: 1px solid $dark-brown;
+		//border: 1px solid $dark-brown;
 		img {
 			position: absolute;
 			z-index: -1;
@@ -26,16 +26,17 @@
 		}
 		.title {
 			padding: 1rem;
-			text-shadow: 1px 1px $dark-brown;
+			text-shadow: 0 1px $dark-brown, 0 -1px $dark-brown, 1px 0 $dark-brown, -1px 0 $dark-brown;
 		}
 		.content {
-			background: rgba($light-brown, 0.97);
+			background: rgba($light-brown, 0.7);
 			color: $dark-brown;
 			position: absolute;
 			padding: .5rem;
 			width: 100%;
 			bottom: 0;
 			min-height: 30%;
+			max-height: 30%;
 			border-top: 1px solid rgba($dark-brown, 0.15);
 			overflow: clip;
 			word-wrap: break-word;
