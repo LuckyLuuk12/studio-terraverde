@@ -4,6 +4,5 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
-	assetsInclude: ['**/*.{xlsx,csv}'],
-
+	assetsInclude: ['**/*.{xlsx,csv}']
 });
