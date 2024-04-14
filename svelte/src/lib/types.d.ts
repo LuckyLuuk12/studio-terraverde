@@ -2,7 +2,7 @@
  * This type represents a Project Category. It uses the image for the Card component.
  */
 export interface ProjectCategory {
-	category: string;
+	title: string;
 	content: string;
 	image: File | string;
 }

@@ -3,27 +3,37 @@ import type { ProjectCategory } from '$lib/types';
 
 export const categories = writable<ProjectCategory[]>([
 	{
-		category: 'Schools',
+		title: 'Schools',
 		content: 'You should put some text about school related projects here.',
 		image: '/src/lib/images/categories/cat1.png'
 	},
 	{
-		category: 'Offices',
+		title: 'Offices',
 		content: 'You should put some text about office related projects here.',
 		image: '/src/lib/images/categories/cat2.png'
 	},
 	{
-		category: 'Cultural Projects',
+		title: 'Cultural Projects',
 		content: 'You should put some text about cultural related projects here. Like churches',
 		image: '/src/lib/images/categories/cat3.png'
 	},
 	{
-		category: 'Other projects',
+		title: 'Student Guidance',
+		content: 'You should put some text here about student guidance things you did',
+		image: '/src/lib/images/categories/cat1.png'
+	},
+	{
+		title: 'Local Authority Projects',
+		content: 'You should put some text here about the projects you did for the local authorities',
+		image: '/src/lib/images/categories/cat3.png'
+	},
+	{
+		title: 'Other projects',
 		content: 'You should put all other projects here',
 		image: '/src/lib/images/categories/cat4.png'
 	},
 	{
-		category: 'Unrealized projects',
+		title: 'Unrealized projects',
 		content: 'You should put text about unrealized projects here',
 		image: '/src/lib/images/categories/cat2.png'
 	}

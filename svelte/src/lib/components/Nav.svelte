@@ -33,10 +33,10 @@
 		if (!content) return;
 		for (let c of content) {
 			const child = c as HTMLElement;
-			console.log(child.className, child.className.includes('content'));
-			if (!child.className.includes('content')) continue;
-			child.style.top = nav.clientHeight + 'px';
-			child.style.display = child.style.display != 'flex' ? 'flex' : 'none';
+			if(child.className.includes('content')) {
+				child.style.top = nav.clientHeight + 'px';
+				child.style.display = child.style.display != 'flex' ? 'flex' : 'none';
+			}
 		}
 	}
 	onMount(() => {

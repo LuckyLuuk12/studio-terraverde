@@ -1,21 +1,21 @@
 <script lang="ts">
-	export let title: string;
-	export let content: string;
-	export let image: string;
+	import type { ProjectCategory } from '$lib/types.d';
+	
+	export let category: ProjectCategory;
 </script>
 
 <div class="card">
-	<img src={image} alt={content} />
-	<h3 class="title">{title}</h3>
-	<p class="content">{content}</p>
+	<img src={category.image} alt="" />
+	<h3 class="title">{category.title}</h3>
+	<p class="content">{category.content}</p>
 </div>
 
 <style lang="scss">
 	@import '../colors';
 	.card {
 		color: $light1;
-		margin: 2rem;
-		border-radius: 0.5rem;
+		margin: 2rem 3.5rem;
+		border-radius: 1%;
 		overflow: clip;
 		position: relative;
 		height: 30rem;
