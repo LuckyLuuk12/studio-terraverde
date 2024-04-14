@@ -1,12 +1,17 @@
 <script lang="ts">
 	import favicon from '../images/logo.png';
 	import { onMount } from 'svelte';
+	import { categories } from '$lib/data';
 
 	let nav: HTMLElement | null = null;
 	let hamburger: HTMLElement | null = null;
 	let hamburgerContent: HTMLElement | null = null;
 	let unfolded: boolean = false;
 	let style = '';
+	
+	let data = []
+	categories.subscribe((value) => { data = value; });
+	
 	function toggleHamburger() {
 		unfolded = !unfolded;
 		let count = 1;
@@ -27,13 +32,19 @@
 		if (!target) return;
 		let button = target.parentNode as HTMLElement;
 		if (!button) return;
+		let icon = button.querySelector('i') as HTMLElement;
+		if (icon) {
+			icon.className = icon.className.includes('down')
+				? icon.className.replace('down', 'up')
+				: icon.className.replace('up', 'down');
+		}
 		let foldable = button.parentNode as HTMLElement;
 		if (!foldable) return;
 		let content = foldable.children;
 		if (!content) return;
 		for (let c of content) {
 			const child = c as HTMLElement;
-			if(child.className.includes('content')) {
+			if (child.className.includes('content')) {
 				child.style.top = nav.clientHeight + 'px';
 				child.style.display = child.style.display != 'flex' ? 'flex' : 'none';
 			}
@@ -86,12 +97,9 @@
 			</div>
 
 			<div class="content">
-				<a href="/work?category=schools">Schools</a>
-				<a href="/work?category=residential-areas">Residential Areas</a>
-				<a href="/work?category=offices">Offices</a>
-				<a href="/work?category=Churches">Offices</a>
-				<a href="/work?category=Unrealized Projects">Offices</a>
-				<a href="/work?category=Other">Offices</a>
+				{#each data as category}
+					<a href={`/work?category=${category.title}`}>{category.title}</a>
+				{/each}
 			</div>
 		</div>
 

@@ -4,7 +4,6 @@
 
 	let data = [];
 	categories.subscribe((value) => (data = value));
-	
 </script>
 
 <svelte:head>
@@ -14,7 +13,7 @@
 
 <main>
 	{#each data as category}
-		<Card category={category} />
+		<Card {category} />
 	{/each}
 </main>
 

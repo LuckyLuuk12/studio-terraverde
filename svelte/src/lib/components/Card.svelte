@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ProjectCategory } from '$lib/types.d';
-	
+
 	export let category: ProjectCategory;
 </script>
 
