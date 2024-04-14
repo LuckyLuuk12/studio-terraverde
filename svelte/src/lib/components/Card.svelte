@@ -1,11 +1,11 @@
 <script lang="ts">
 	export let title: string;
 	export let content: string;
-	export let src: string;
+	export let image: string;
 </script>
 
 <div class="card">
-	<img {src} alt="" />
+	<img src={image} alt={content} />
 	<h3 class="title">{title}</h3>
 	<p class="content">{content}</p>
 </div>
@@ -20,7 +20,6 @@
 		position: relative;
 		height: 30rem;
 		width: 20rem;
-		//border: 1px solid $dark-brown;
 		img {
 			position: absolute;
 			z-index: -1;
