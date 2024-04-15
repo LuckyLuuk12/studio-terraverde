@@ -1,7 +1,8 @@
 import { writable } from 'svelte/store';
 import type { ProjectCategory, Project } from '$lib/types';
 
-export const categories = writable<ProjectCategory[]>([
+
+const data: ProjectCategory[] = [
 	{
 		title: 'Schools',
 		content: 'You should put some text about school related projects here.',
@@ -37,11 +38,31 @@ export const categories = writable<ProjectCategory[]>([
 		content: 'You should put text about unrealized projects here',
 		image: '/images/categories/cat2.png'
 	}
+]
+const cats = data.map((cat) => {
+	return {
+		title: cat.title,
+		content: cat.content,
+		href: cat.href ? cat.href : `/work?c=${cat.title}`,
+		image: cat.image
+	};
+});
+export const categories = writable<ProjectCategory[]>(cats);
+export const projects = writable<Project[]>([
+	{
+		title: 'Project 1',
+		description: 'This is the first project',
+		images: ['/images/projects/project1.jpg'],
+		categories: [cats[0]],
+		location: 'Amsterdam',
+		other: [{}]
+	}
 ]);
-
-// export const projects = writable<Project[]>([
-// 	{
-// 		title: 'Project 1',
-// 		description: 'This is the first project
-// 	}
-// ]);
+export const slideshow = writable<string[]>([
+	'/images/projects/alkmaar/img0.jpg',
+	'/images/projects/alkmaar/img1.jpg',
+	'/images/projects/alkmaar/img2.jpg',
+	'/images/projects/houtwal/img0.jpg',
+	'/images/projects/houtwal/img1.jpg',
+	'/images/projects/houtwal/img2.jpg',
+]);

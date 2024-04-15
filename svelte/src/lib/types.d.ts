@@ -4,7 +4,8 @@
 export interface ProjectCategory {
 	title: string;
 	content: string;
-	image: File | string;
+	href?: string;
+	image: string;
 }
 
 /**

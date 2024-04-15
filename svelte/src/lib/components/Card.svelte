@@ -2,13 +2,14 @@
 	import type { ProjectCategory } from '$lib/types.d';
 
 	export let category: ProjectCategory;
+	let href = category.href ? category.href : '/work?c=' + category.title;
 </script>
 
-<div class="card">
+<a {href} class="card">
 	<img src={category.image} alt="" />
 	<h3 class="title">{category.title}</h3>
 	<p class="content">{category.content}</p>
-</div>
+</a>
 
 <style lang="scss">
 	@import '../colors';

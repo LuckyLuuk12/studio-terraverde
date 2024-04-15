@@ -11,6 +11,7 @@
 	
 	let data = []
 	categories.subscribe((value) => { data = value; });
+
 	
 	function toggleHamburger() {
 		unfolded = !unfolded;
@@ -22,7 +23,7 @@
 			if (count == 3) span.style.transform = unfolded ? 'rotate(-45deg)' : 'rotate(0)';
 			count++;
 		}
-		if (!hamburgerContent) return;
+		if (!hamburgerContent || !window) return;
 		let screenWidth = window.innerWidth;
 		style = screenWidth <= 800 && unfolded ? 'display: contents;' : 'display: none';
 	}
@@ -50,8 +51,10 @@
 			}
 		}
 	}
+	
 	onMount(() => {
-		window.addEventListener('resize', () => {
+		window?.addEventListener('resize', () => {
+			if (!nav || !nav.querySelector('.foldable')) return;
 			for (let foldable of nav.querySelector('.foldable')) {
 				let contents = foldable.querySelectorAll('.content');
 				for (let content of contents) {
@@ -98,7 +101,7 @@
 
 			<div class="content">
 				{#each data as category}
-					<a href={`/work?category=${category.title}`}>{category.title}</a>
+					<a href={category.href}>{category.title}</a>
 				{/each}
 			</div>
 		</div>
@@ -172,7 +175,6 @@
 		a {
 			color: $dark-brown;
 			transition: ease all 10ms;
-			//padding: 0 0.5rem;
 			&:hover {
 				color: rgba($dark-brown, 0.85);
 				border-bottom: 3px solid rgba($dark-brown, 0.85);
@@ -180,13 +182,12 @@
 		}
 		img {
 			max-height: 4rem;
-			//margin: 2rem 0;
 			padding-left: 0;
 		}
 	}
 	.page {
-		display: contents;
-		//background-color: $light1;
+		position: relative;
+		min-height: 85vh;
 		z-index: 0;
 	}
 	@media only screen and (min-width: 800px) {
@@ -200,6 +201,7 @@
 			flex-direction: column;
 			height: fit-content;
 			max-height: unset;
+			padding: 0 0 2rem 0;
 			img {
 				max-width: 75%;
 				margin: 1.5rem 0;
@@ -213,9 +215,6 @@
 				max-height: fit-content;
 				height: fit-content;
 			}
-		}
-		.page {
-			height: 100vh;
 		}
 	}
 </style>

@@ -5,5 +5,13 @@
 </script>
 
 <Nav>
-	<slot />
+	<main>
+		<slot />
+	</main>
 </Nav>
+
+<style>
+	main {
+		margin: 0 4%;
+	}
+</style>
