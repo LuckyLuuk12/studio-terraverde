@@ -164,7 +164,7 @@
 			cursor: pointer;
 			position: absolute;
 			top: 2rem;
-			right: 2rem;
+			left: 2rem;
 			.line {
 				margin: 0 0 0.5rem 0;
 				width: 2rem;
