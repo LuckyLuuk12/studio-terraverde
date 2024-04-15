@@ -1,23 +1,56 @@
 <script lang="ts">
-  import Card from '$lib/components/Card.svelte';
-	import cat1 from '$lib/images/categories/cat1.png';
-	import cat2 from '$lib/images/categories/cat2.png';
-	import cat3 from '$lib/images/categories/cat3.png';
-	import cat4 from '$lib/images/categories/cat4.png';
+	import Card from '$lib/components/Card.svelte';
+	import { categories, projects } from '$lib/data';
+	import { page } from '$app/stores';
+
+	let cats = [];
+	categories.subscribe((value) => (cats = value));
+	let pros = [];
+	projects.subscribe((value) => (pros = value));
+	let selectedCategory = null;
+	let selectedProject = null;
+	// TODO: get URL query params
+	page.subscribe(({ query }) => {
+		console.log("URL: "+query);
+	});
 </script>
+
+<svelte:head>
+	<title>Previous Work</title>
+	<meta name="description" content="My previous work" />
+</svelte:head>
+
 <main>
-  <Card title="Category 1" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat1}/>
-  <Card title="Category 2" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat2}/>
-  <Card title="Category 3" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat3}/>
-  <Card title="Category 4" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat4}/>
-  <Card title="Category 5" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat4}/>
-  <Card title="Category 6" content="asdashdajdgvfysfbhdvchjnsmajekfdhbvjdkscvgs duvgbhsbhv hb hjfbvh sdvf sbjvf bwhs vfgsdj sdj sdj hvfh sjv" src={cat4}/>
+	{#if !selectedCategory && !selectedProject}
+		{#each cats as category}
+			<Card {category} />
+		{/each}
+	{/if}
+	{#if selectedCategory && !selectedProject}
+		{#each pros as project}
+			{#if project.categories.includes(selectedCategory)}
+				{project.title}
+			{/if}
+		{/each}
+	{/if}
+	{#if selectedCategory && selectedProject}
+		{#each cats as category}
+			{#if category.name === selectedCategory}
+				{#each category.projects as project}
+					{#if project.name === selectedProject}
+						<Card {category} {project} />
+					{/if}
+				{/each}
+			{/if}
+		{/each}
+	{/if}
 </main>
+
 <style lang="scss">
 	@import '$lib/colors';
-  main {
-    display: flex;
+	main {
+		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-  }
+	}
 </style>
