@@ -166,8 +166,8 @@
 			height: 2rem;
 			cursor: pointer;
 			position: absolute;
-			top: 2.5rem;
-			left: 2.5rem;
+			top: 2rem;
+			left: 2rem;
 			.line {
 				margin: 0 0 0.5rem 0;
 				width: 2rem;
@@ -210,9 +210,12 @@
 			a {
 				margin: 0.2rem 5rem;
 			}
+			.content a {
+				margin: 0.2rem 0;
+			}
 			img {
 				max-width: 75%;
-				align-self: center;
+				align-self: flex-end;
 				margin: 1.5rem 0;
 				z-index: 0;
 			}
