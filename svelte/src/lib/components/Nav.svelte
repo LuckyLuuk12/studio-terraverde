@@ -208,13 +208,14 @@
 			height: fit-content;
 			max-height: unset;
 			a {
-				margin: 0.2rem 5rem;
+				margin: 0.2rem 6.5rem;
 			}
 			.content a {
 				margin: 0.2rem 0;
 			}
 			img {
 				max-width: 75%;
+				height: 3rem;
 				align-self: flex-end;
 				margin: 1.5rem 0;
 				z-index: 0;
