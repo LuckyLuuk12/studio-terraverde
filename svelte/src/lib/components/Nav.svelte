@@ -54,11 +54,11 @@
 	
 	onMount(() => {
 		window?.addEventListener('resize', () => {
-			if (!nav || !nav.querySelector('.foldable')) return;
-			for (let foldable of nav.querySelector('.foldable')) {
+			if (!nav || !nav.querySelector('.foldable').hasChildNodes()) return;
+			for (let foldable of nav.querySelectorAll('.foldable')) {
 				let contents = foldable.querySelectorAll('.content');
 				for (let content of contents) {
-					content.style.top = nav.clientHeight + 'px';
+					(content as HTMLElement).style.top = nav.clientHeight + 'px';
 				}
 			}
 		});
@@ -132,6 +132,9 @@
 		font-weight: 800;
 		font-size: 1.1rem;
 		.foldable {
+			.button {
+				cursor: pointer;
+			}
 			.content {
 				background-color: rgba($light3, 0.9);
 				position: absolute;
@@ -163,8 +166,8 @@
 			height: 2rem;
 			cursor: pointer;
 			position: absolute;
-			top: 2rem;
-			left: 2rem;
+			top: 2.5rem;
+			left: 2.5rem;
 			.line {
 				margin: 0 0 0.5rem 0;
 				width: 2rem;
@@ -200,11 +203,16 @@
 		nav {
 			justify-content: unset;
 			flex-direction: column;
+			align-items: start;
+			//align-items: stretch;
 			height: fit-content;
 			max-height: unset;
-			padding: 0 0 2rem 0;
+			a {
+				margin: 0.2rem 5rem;
+			}
 			img {
 				max-width: 75%;
+				align-self: center;
 				margin: 1.5rem 0;
 				z-index: 0;
 			}
