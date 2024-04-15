@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 	
 	export let images: string[] = [];
-	export let interval: number = 5000;
+	export let interval: number = 10000;
 	export let controllable: boolean = true;
-	export let auto: boolean = true;
+	export let auto: boolean = false;
 	
 	$: current = 0;
 	function slide(to: number = current+1) {
@@ -29,6 +29,11 @@
 			<i class="fas fa-chevron-right"></i>
 		</button>
 	{/if}
+	<div class="dots">
+		{#each images as image, i}
+			<span class:current={i === current} on:click={() => slide(i)}></span>
+		{/each}
+	</div>
 </div>
 
 <style lang="scss">
@@ -44,9 +49,29 @@
 		background-size: cover;
 		background-position: center;
 		border-radius: 0.5rem;
+		.dots {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			span {
+				width: 1rem;
+				height: 1rem;
+				background-color: $light1;
+				border-radius: 50%;
+				margin: 0 0.5rem 1rem 0.5rem;
+				cursor: pointer;
+				&:hover {
+					background-color: $light2;
+				}
+				&.current {
+					background-color: $light3;
+				}
+			}
+		}
 		button {
 			position: absolute;
-			z-index: 3;
 			top: 50%;
 			transform: translateY(-50%);
 			background-color: rgba($dark-brown, 0.2);
@@ -64,7 +89,7 @@
 				border-bottom-right-radius: 0.5rem;
 				border-top-right-radius: 0.5rem;
 			}
-			&:last-child {
+			&:nth-child(2) {
 				right: 0;
 				border-bottom-left-radius: 0.5rem;
 				border-top-left-radius: 0.5rem;

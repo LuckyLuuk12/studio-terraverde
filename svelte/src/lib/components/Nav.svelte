@@ -133,8 +133,7 @@
 		font-size: 1.1rem;
 		.foldable {
 			.content {
-				background-color: $light3;
-				color: $dark-brown;
+				background-color: rgba($light3, 0.9);
 				position: absolute;
 				display: none;
 				flex-direction: column;
@@ -146,6 +145,8 @@
 				transition: ease all 0.5s;
 				z-index: 1;
 				& > * {
+					color: $accent2;
+					border-color: $accent2;
 					font-size: 1rem;
 					max-width: fit-content;
 				}
