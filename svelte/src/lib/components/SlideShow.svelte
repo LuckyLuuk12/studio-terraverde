@@ -60,13 +60,13 @@
 			position: absolute;
 			top: 2%;
 			left: 2%;
-			color: $dark-brown;
+			color: $light1;
 			font-size: 2rem;
 			text-shadow:
-				0 1px $light2,
-				0 -1px $light2,
-				1px 0 $light2,
-				-1px 0 $light2;
+				0 1px $dark-brown,
+				0 -1px $dark-brown,
+				1px 0 $dark-brown,
+				-1px 0 $dark-brown;
 		}
 		.content {
 			position: absolute;
