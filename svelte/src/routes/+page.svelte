@@ -3,15 +3,14 @@
 	import { slideshow } from '$lib/data';
 
 	let images = [];
-	slideshow.subscribe(value => {
+	slideshow.subscribe((value) => {
 		images = value;
 	});
-
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Home page">
+	<meta name="description" content="Home page" />
 </svelte:head>
 
 <div class="content">

@@ -1,7 +1,6 @@
 import { writable } from 'svelte/store';
 import type { ProjectCategory, Project } from '$lib/types';
 
-
 const data: ProjectCategory[] = [
 	{
 		title: 'Schools',
@@ -38,7 +37,7 @@ const data: ProjectCategory[] = [
 		content: 'You should put text about unrealized projects here',
 		image: '/images/categories/cat2.png'
 	}
-]
+];
 const cats = data.map((cat) => {
 	return {
 		title: cat.title,
@@ -64,5 +63,5 @@ export const slideshow = writable<string[]>([
 	'/images/projects/alkmaar/img2.jpg',
 	'/images/projects/houtwal/img0.jpg',
 	'/images/projects/houtwal/img1.jpg',
-	'/images/projects/houtwal/img2.jpg',
+	'/images/projects/houtwal/img2.jpg'
 ]);

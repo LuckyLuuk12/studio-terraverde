@@ -8,11 +8,12 @@
 	let hamburgerContent: HTMLElement | null = null;
 	let unfolded: boolean = false;
 	let style = '';
-	
-	let data = []
-	categories.subscribe((value) => { data = value; });
 
-	
+	let data = [];
+	categories.subscribe((value) => {
+		data = value;
+	});
+
 	function toggleHamburger() {
 		unfolded = !unfolded;
 		let count = 1;
@@ -51,7 +52,7 @@
 			}
 		}
 	}
-	
+
 	onMount(() => {
 		window?.addEventListener('resize', () => {
 			if (!nav || !nav.querySelector('.foldable').hasChildNodes()) return;

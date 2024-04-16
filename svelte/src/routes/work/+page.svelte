@@ -7,11 +7,12 @@
 	categories.subscribe((value) => (cats = value));
 	let pros = [];
 	projects.subscribe((value) => (pros = value));
-	let selectedCategory = null;
-	let selectedProject = null;
+	let selectedCategory: string | null = null;
+	let selectedProject: string | null = null;
 	// TODO: get URL query params
-	page.subscribe(({ query }) => {
-		console.log("URL: "+query);
+	page.subscribe((v) => {
+		selectedCategory = new URLSearchParams(v.url.search).get('c');
+		selectedProject = new URLSearchParams(v.url.search).get('p');
 	});
 </script>
 
@@ -20,7 +21,7 @@
 	<meta name="description" content="My previous work" />
 </svelte:head>
 
-<main>
+<div class="content">
 	{#if !selectedCategory && !selectedProject}
 		{#each cats as category}
 			<Card {category} />
@@ -44,11 +45,11 @@
 			{/if}
 		{/each}
 	{/if}
-</main>
+</div>
 
 <style lang="scss">
 	@import '$lib/colors';
-	main {
+	.content {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
