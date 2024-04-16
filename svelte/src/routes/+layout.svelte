@@ -5,13 +5,14 @@
 </script>
 
 <Nav>
-	<main>
+	<div class="page-content">
 		<slot />
-	</main>
+	</div>
 </Nav>
 
 <style>
-	main {
-		margin: 0 4%;
+	.page-content {
+		min-height: 65vh;
+		margin: 0 3%;
 	}
 </style>

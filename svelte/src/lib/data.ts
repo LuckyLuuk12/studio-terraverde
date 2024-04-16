@@ -1,7 +1,8 @@
-import { writable } from 'svelte/store';
+import { type Writable, writable } from 'svelte/store';
 import type { ProjectCategory, Project } from '$lib/types';
 
-const data: ProjectCategory[] = [
+// Data for the project categories
+const categoryData: ProjectCategory[] = [
 	{
 		title: 'Schools',
 		content: 'You should put some text about school related projects here.',
@@ -38,7 +39,8 @@ const data: ProjectCategory[] = [
 		image: '/images/categories/cat2.png'
 	}
 ];
-const cats = data.map((cat) => {
+// set the href for each category to the work page with the category as a query parameter
+const cats: ProjectCategory[] = categoryData.map((cat) => {
 	return {
 		title: cat.title,
 		content: cat.content,
@@ -46,18 +48,85 @@ const cats = data.map((cat) => {
 		image: cat.image
 	};
 });
-export const categories = writable<ProjectCategory[]>(cats);
-export const projects = writable<Project[]>([
+// Data for the projects
+const projectData: Project[] = [
 	{
-		title: 'Project 1',
-		description: 'This is the first project',
-		images: ['/images/projects/project1.jpg'],
+		title: 'School 1',
+		description: 'This is the first project in the category Schools',
+		images: ['/images/projects/alkmaar/img1.jpg'],
 		categories: [cats[0]],
 		location: 'Amsterdam',
 		other: [{}]
+	},
+	{
+		title: 'School 2',
+		description: 'This is the second project in the category Schools',
+		images: ['/images/projects/houtwal/img1.jpg'],
+		categories: [cats[0]],
+		location: 'Rotterdam',
+		other: [{}]
+	},
+	{
+		title: 'Office 1',
+		description: 'This is the first project in the category Offices',
+		images: ['/images/projects/alkmaar/img0.jpg'],
+		categories: [cats[1]],
+		location: 'Utrecht',
+		other: [{}]
+	},
+	{
+		title: 'Office 2',
+		description: 'This is the second project in the category Offices',
+		images: ['/images/projects/houtwal/img0.jpg'],
+		categories: [cats[1]],
+		location: 'Den Haag',
+		other: [{}]
+	},
+	{
+		title: 'Cultural Project 1',
+		description: 'This is the first project in the category Cultural Projects',
+		images: ['/images/projects/alkmaar/img2.jpg'],
+		categories: [cats[2]],
+		location: 'Groningen',
+		other: [{}]
+	},
+	{
+		title: 'Cultural Project 2',
+		description: 'This is the second project in the category Cultural Projects',
+		images: ['/images/projects/houtwal/img2.jpg'],
+		categories: [cats[2]],
+		location: 'Maastricht',
+		other: [{}]
+	},
+	{
+		title: 'Student Guidance 1',
+		description: 'This is the first project in the category Student Guidance',
+		images: ['/images/projects/alkmaar/img1.jpg'],
+		categories: [cats[3]],
+		location: 'Amsterdam',
+		other: [{}]
+	},
+	{
+		title: 'Student Guidance 2',
+		description: 'This is the second project in the category Student Guidance',
+		images: ['/images/projects/houtwal/img1.jpg'],
+		categories: [cats[3]],
+		location: 'Rotterdam',
+		other: [{}]
+	},
+	{
+		title: 'Local Authority Project 1',
+		description: 'This is the first project in the category Local Authority Projects',
+		images: ['/images/projects/alkmaar/img0.jpg'],
+		categories: [cats[4]],
+		location: 'Utrecht',
+		other: [{}]
 	}
-]);
-export const slideshow = writable<string[]>([
+];
+
+export const categories: Writable<ProjectCategory[]> = writable<ProjectCategory[]>(cats);
+export const projects: Writable<Project[]> = writable<Project[]>(projectData);
+export const slideshow: Writable<string[]> = writable<string[]>([
 	'/images/projects/alkmaar/img0.jpg',
 	'/images/projects/alkmaar/img1.jpg',
 	'/images/projects/alkmaar/img2.jpg',
