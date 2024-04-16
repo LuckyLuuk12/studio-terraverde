@@ -123,14 +123,18 @@ const projectData: Project[] = [
 		other: [{}]
 	}
 ];
+// Slides for the home page slideshow
+const slides: { image: string, title?: string, content?: string }[] = [
+	{ image: '/images/projects/alkmaar/img0.jpg', title: 'Slide 1', content: 'This is the first slide'},
+	{ image: '/images/projects/alkmaar/img1.jpg' },
+	{ image: '/images/projects/alkmaar/img2.jpg' },
+	{ image: '/images/projects/houtwal/img0.jpg' },
+	{ image: '/images/projects/houtwal/img1.jpg' },
+	{ image: '/images/projects/houtwal/img2.jpg', title: 'Slide 6', content: 'This is the last slide'}
+];
+
+
 
 export const categories: Writable<ProjectCategory[]> = writable<ProjectCategory[]>(cats);
 export const projects: Writable<Project[]> = writable<Project[]>(projectData);
-export const slideshow: Writable<string[]> = writable<string[]>([
-	'/images/projects/alkmaar/img0.jpg',
-	'/images/projects/alkmaar/img1.jpg',
-	'/images/projects/alkmaar/img2.jpg',
-	'/images/projects/houtwal/img0.jpg',
-	'/images/projects/houtwal/img1.jpg',
-	'/images/projects/houtwal/img2.jpg'
-]);
+export const slideshow: Writable<{ image: string, title?: string, content?: string }[]> = writable<{ image: string, title?: string, content?: string }[]>(slides);

@@ -2,9 +2,9 @@
 	import SlideShow from '$lib/components/SlideShow.svelte';
 	import { slideshow } from '$lib/data';
 
-	let images = [];
+	let slides = [];
 	slideshow.subscribe((value) => {
-		images = value;
+		slides = value;
 	});
 </script>
 
@@ -14,7 +14,7 @@
 </svelte:head>
 
 <div class="content">
-	<SlideShow {images} />
+	<SlideShow images={slides.map(s=>s.image)} titles={slides.map(s=>s?.title)} contents={slides.map(s=>s?.content)}/>
 </div>
 
 <style>

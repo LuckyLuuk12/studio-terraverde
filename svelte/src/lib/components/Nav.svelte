@@ -154,6 +154,8 @@
 		max-height: 15vh;
 		font-weight: 800;
 		font-size: 1.1rem;
+		border-bottom: 1px solid rgba($dark-brown, 0.05);
+		//text-transform: capitalize;
 		.foldable {
 			.button {
 				cursor: pointer;
@@ -218,6 +220,7 @@
 		}
 	}
 	.page {
+		background-color: $light1;
 		position: relative;
 		min-height: 85vh;
 		max-width: 100vw;

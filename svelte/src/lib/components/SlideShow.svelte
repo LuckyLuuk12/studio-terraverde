@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	export let images: string[] = [];
+	export let images: string[];
+	export let titles: string[] = [];
+	export let contents: string[] = [];
 	export let interval: number = 10000;
 	export let controllable: boolean = true;
 	export let auto: boolean = false;
@@ -20,7 +22,6 @@
 </script>
 
 <div class="slideshow" style="background-image: url({images[current]})">
-	<!--	<img src={images[current]} alt="">-->
 	{#if controllable}
 		<button class="controllable" on:click={() => slide(current - 1)}>
 			<i class="fas fa-chevron-left"></i>
@@ -28,6 +29,12 @@
 		<button class="controllable" on:click={() => slide(current + 1)}>
 			<i class="fas fa-chevron-right"></i>
 		</button>
+	{/if}
+	{#if titles[current]}
+		<h2 class="title">{titles[current]}</h2>
+	{/if}
+	{#if contents[current]}
+		<p class="content">{contents[current]}</p>
 	{/if}
 	<div class="dots">
 		{#each images as image, i}
@@ -49,6 +56,29 @@
 		background-size: cover;
 		background-position: center;
 		border-radius: 0.5rem;
+		.title {
+			position: absolute;
+			top: 2%;
+			left: 2%;
+			color: $dark-brown;
+			font-size: 2rem;
+			text-shadow:
+				0 1px $light2,
+				0 -1px $light2,
+				1px 0 $light2,
+				-1px 0 $light2;
+		}
+		.content {
+			position: absolute;
+			bottom: 13%;
+			right: 15%;
+			max-width: 33%;
+			padding: 1rem;
+			border-radius: 0.5rem;
+			font-size: 1.15rem;
+			color: $dark-brown;
+			background-color: rgba($light-brown, 0.35);
+		}
 		.dots {
 			position: absolute;
 			bottom: 0;
