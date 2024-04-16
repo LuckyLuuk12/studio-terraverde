@@ -8,11 +8,12 @@
 	let hamburgerContent: HTMLElement | null = null;
 	let unfolded: boolean = false;
 	let style = '';
-	
-	let data = []
-	categories.subscribe((value) => { data = value; });
 
-	
+	let data = [];
+	categories.subscribe((value) => {
+		data = value;
+	});
+
 	function toggleHamburger() {
 		unfolded = !unfolded;
 		let count = 1;
@@ -51,14 +52,14 @@
 			}
 		}
 	}
-	
+
 	onMount(() => {
 		window?.addEventListener('resize', () => {
-			if (!nav || !nav.querySelector('.foldable')) return;
-			for (let foldable of nav.querySelector('.foldable')) {
+			if (!nav || !nav.querySelector('.foldable').hasChildNodes()) return;
+			for (let foldable of nav.querySelectorAll('.foldable')) {
 				let contents = foldable.querySelectorAll('.content');
 				for (let content of contents) {
-					content.style.top = nav.clientHeight + 'px';
+					(content as HTMLElement).style.top = nav.clientHeight + 'px';
 				}
 			}
 		});
@@ -83,6 +84,29 @@
 	<div class="hamburger-content" bind:this={hamburgerContent} {style}>
 		<a href="/">home</a>
 		<div class="foldable">
+			<div class="button">
+				<a href="/work">work</a>
+				<i
+					class="fa fa-caret-down fa-fw"
+					role="button"
+					tabindex="0"
+					on:click={(e) => {
+						toggleFold(e);
+					}}
+					on:keyup
+					on:keydown={(e) => {
+						toggleFold(e);
+					}}
+				/>
+			</div>
+
+			<div class="content">
+				{#each data as category}
+					<a href={category.href}>{category.title}</a>
+				{/each}
+			</div>
+		</div>
+		<div class="foldable">
 			<div
 				class="button"
 				role="button"
@@ -95,15 +119,14 @@
 					toggleFold(e);
 				}}
 			>
-				<a href="/work">work</a>
-				<i class="fa fa-caret-down fa-fw"></i>
+				<span>more</span>
+				<i class="fa fa-caret-down fa-fw" />
 			</div>
-
 			<div class="content">
-				{#each data as category}
-					<a href={category.href}>{category.title}</a>
-				{/each}
+				<a href="/references">references</a>
+				<a href="/ambitions">ambitions</a>
 			</div>
+<!--	TODO: fix multiple foldable containers overlapping each other		-->
 		</div>
 
 		<a href="/about">about</a>
@@ -131,12 +154,18 @@
 		max-height: 15vh;
 		font-weight: 800;
 		font-size: 1.1rem;
+		border-bottom: 1px solid rgba($dark-brown, 0.05);
+		//text-transform: capitalize;
 		.foldable {
+			.button {
+				cursor: pointer;
+			}
 			.content {
 				background-color: rgba($light3, 0.9);
 				position: absolute;
 				display: none;
-				flex-direction: column;
+				flex-wrap: wrap;
+				flex-direction: row;
 				padding: 4rem 5rem;
 				gap: 1rem;
 				width: 100vw;
@@ -145,10 +174,13 @@
 				transition: ease all 0.5s;
 				z-index: 1;
 				& > * {
+					flex: 32%;
 					color: $accent2;
-					border-color: $accent2;
+					border-bottom: 3px solid transparent;
 					font-size: 1rem;
-					max-width: fit-content;
+					&:hover {
+						border-color: $accent2;
+					}
 				}
 			}
 		}
@@ -164,7 +196,7 @@
 			cursor: pointer;
 			position: absolute;
 			top: 2rem;
-			right: 2rem;
+			left: 2rem;
 			.line {
 				margin: 0 0 0.5rem 0;
 				width: 2rem;
@@ -176,9 +208,10 @@
 		a {
 			color: $dark-brown;
 			transition: ease all 10ms;
+			border-bottom: 3px solid transparent;
 			&:hover {
 				color: rgba($dark-brown, 0.85);
-				border-bottom: 3px solid rgba($dark-brown, 0.85);
+				border-color: rgba($dark-brown, 0.85);
 			}
 		}
 		img {
@@ -187,8 +220,10 @@
 		}
 	}
 	.page {
+		background-color: $light1;
 		position: relative;
 		min-height: 85vh;
+		max-width: 100vw;
 		z-index: 0;
 	}
 	@media only screen and (min-width: 800px) {
@@ -200,11 +235,20 @@
 		nav {
 			justify-content: unset;
 			flex-direction: column;
+			align-items: start;
+			//align-items: stretch;
 			height: fit-content;
 			max-height: unset;
-			padding: 0 0 2rem 0;
+			a, span {
+				margin: 0.2rem 6.5rem;
+			}
+			.content a {
+				margin: 0.2rem 0;
+			}
 			img {
 				max-width: 75%;
+				height: 3rem;
+				align-self: flex-end;
 				margin: 1.5rem 0;
 				z-index: 0;
 			}

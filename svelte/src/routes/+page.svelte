@@ -2,20 +2,19 @@
 	import SlideShow from '$lib/components/SlideShow.svelte';
 	import { slideshow } from '$lib/data';
 
-	let images = [];
-	slideshow.subscribe(value => {
-		images = value;
+	let slides = [];
+	slideshow.subscribe((value) => {
+		slides = value;
 	});
-
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Home page">
+	<meta name="description" content="Home page" />
 </svelte:head>
 
 <div class="content">
-	<SlideShow {images} />
+	<SlideShow images={slides.map(s=>s.image)} titles={slides.map(s=>s?.title)} contents={slides.map(s=>s?.content)}/>
 </div>
 
 <style>
