@@ -157,6 +157,7 @@
 		border-bottom: 1px solid rgba($dark-brown, 0.05);
 		//text-transform: capitalize;
 		.foldable {
+			padding: 0 0 3px 0;
 			.button {
 				cursor: pointer;
 			}
