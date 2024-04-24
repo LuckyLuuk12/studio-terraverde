@@ -10,12 +10,9 @@
 	projects.subscribe((value) => (pros = value));
 	let selectedCategory: string | null = null;
 	let selectedProject: string | null = null;
-	// TODO: get URL query params
 	page.subscribe((v) => {
 		selectedCategory = new URLSearchParams(v.url.search).get('c');
 		selectedProject = new URLSearchParams(v.url.search).get('p');
-		console.log(selectedCategory, selectedProject);
-		console.log([...new Set(pros.flatMap((p) => p.categories.map((c) => c.title)))]);
 	});
 </script>
 
