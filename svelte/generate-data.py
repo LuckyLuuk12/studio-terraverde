@@ -22,10 +22,11 @@ def generate_ts_list(root_dir):
         project_path = os.path.join(projects_dir, project_name)
         if os.path.isdir(project_path):
             images = get_files_from_directory(project_path)
+            images_r = ["/images/"+os.path.relpath(img, root_dir).replace("\\", "/") for img in images]
             project = {
                 "title": project_name,
                 "description": f"This is the project named {project_name}",
-                "images": [os.path.relpath(img, root_dir).replace("\\", "/") for img in images],
+                "images": images_r,
                 "categories": [],  # Leave categories empty
                 "location": "",  # Leave location empty
                 "other": [{}]  # Leave other as [{}]
@@ -34,38 +35,10 @@ def generate_ts_list(root_dir):
 
     return projects
 
-def generate_ts_code(projects):
-    """ Function to generate TypeScript code from the projects list. """
-    ts_code = "export interface Project {\n"
-    ts_code += "    title: string;\n"
-    ts_code += "    description: string;\n"
-    ts_code += "    images: (File | string)[];\n"
-    ts_code += "    categories: ProjectCategory[];\n"
-    ts_code += "    location: string;\n"
-    ts_code += "    other: [{}];\n"
-    ts_code += "}\n\n"
-
-    ts_code += "const projects: Project[] = [\n"
-    for project in projects:
-        ts_code += f"    {{\n"
-        ts_code += f'        title: "{project["title"]}",\n'
-        ts_code += f'        description: "{project["description"]}",\n'
-        ts_code += f'        images: {str(project["images"])}',  # Convert list of images to JSON array
-        ts_code += f',\n'
-        ts_code += f'        categories: {json.dumps(project["categories"])}',  # Leave categories empty
-        ts_code += f',\n'
-        ts_code += f'        location: "{project["location"]}",\n'
-        ts_code += f'        other: {json.dumps(project["other"])}\n'
-        ts_code += f'    }},\n'
-    ts_code += "];\n\n"
-    ts_code += "export default projects;\n"
-
-    return ts_code
 
 if __name__ == "__main__":
     root_directory = "./static/images"  # Change this to your images directory
     projects_list = generate_ts_list(root_directory)
-#     ts_code = generate_ts_code(projects_list)
 
     # Write to TypeScript file
     with open("./src/lib/projects.ts", "w") as ts_file:
