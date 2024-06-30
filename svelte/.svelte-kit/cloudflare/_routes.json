@@ -1,6 +1,1 @@
-{
-	"version": 1,
-	"description": "",
-	"include": ["/*"],
-	"exclude": ["/_app/*","/images/*"]
-}
+{"version": 1, "description": "", "include": ["/*"], "exclude": ["/_app/*","/images/*"]}
