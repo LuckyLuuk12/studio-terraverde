@@ -1,5 +1,4 @@
 <script lang="ts">
-
 </script>
 
 <svelte:head>
@@ -7,7 +6,5 @@
 	<meta name="description" content="All you want to know about me!" />
 </svelte:head>
 
-
 <style lang="scss">
-
 </style>

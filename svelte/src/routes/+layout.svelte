@@ -2,6 +2,7 @@
 	import '$lib/styles.scss';
 	import '@fortawesome/fontawesome-free/css/all.css';
 	import Nav from '$lib/components/Nav.svelte';
+	// TODO: use google maps link in location of the project
 </script>
 
 <Nav>

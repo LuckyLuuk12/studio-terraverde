@@ -1,5 +1,4 @@
 <script lang="ts">
-
 </script>
 
 <svelte:head>
@@ -7,8 +6,5 @@
 	<meta name="description" content="Contact information" />
 </svelte:head>
 
-
-
 <style lang="scss">
-
 </style>
