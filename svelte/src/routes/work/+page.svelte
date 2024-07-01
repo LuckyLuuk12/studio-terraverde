@@ -12,8 +12,10 @@
 	let selectedProject: string | null = null;
 	page.subscribe((v) => {
 		selectedCategory = new URLSearchParams(v.url.search).get('c');
-		selectedProject = new URLSearchParams(v.url.search).get('p');
+		selectedProject = new URLSearchParams(v.url.search)?.get('p')?.replaceAll('+', ' ').replaceAll('|', '&');
 	});
+	
+	$: console.log(selectedCategory, selectedProject);
 </script>
 
 <svelte:head>
@@ -42,7 +44,7 @@
 						title: project.title,
 						content: project.description,
 						image: project.images[0],
-						href: `?p=${project.title}`
+						href: `?p=${project.title.replaceAll(' ', '+').replaceAll('&', '|')}`
 					}}
 				/>
 			{/if}

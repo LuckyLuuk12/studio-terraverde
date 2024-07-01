@@ -82,6 +82,7 @@
 		}
 		.dots {
 			position: absolute;
+			max-width: 100%;
 			bottom: 0;
 			left: 50%;
 			transform: translateX(-50%);
