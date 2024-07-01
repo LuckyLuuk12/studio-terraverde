@@ -19,6 +19,7 @@
 <style lang="scss">
 	@import '../../colors';
 	.profile {
+		background-color: rgba($light-brown, 0.2);
 		display: flex;
 		flex-direction: column;
 		align-items: center;

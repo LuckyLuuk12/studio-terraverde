@@ -1,11 +1,13 @@
 <script lang="ts">
-	import type { ProjectCategory } from '$lib/types.d';
+	import type { ProjectCategory } from '$lib/types';
 
 	export let category: ProjectCategory;
-	let href = category.href ? category.href : '/work?c=' + category.title;
+	let href: string = category.href ? category.href : '/work?c=' + category.title;
+	// @ts-ignore
+	const fixedHref: string = href.replaceAll(' ', '+').replaceAll('&', '|');
 </script>
 
-<a {href} class="card">
+<a href={fixedHref} class="card">
 	<img src={category.image} alt="" />
 	<h3 class="title">{category.title}</h3>
 	<p class="content">{category.content}</p>
@@ -16,7 +18,7 @@
 	.card {
 		color: $light1;
 		margin: 2rem 3.5rem;
-		border-radius: 1%;
+		border-radius: 0.25rem;
 		overflow: clip;
 		position: relative;
 		height: 30rem;

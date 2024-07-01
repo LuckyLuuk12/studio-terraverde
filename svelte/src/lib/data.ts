@@ -6,17 +6,17 @@ const categoryData: ProjectCategory[] = [
 	{
 		title: 'Schools',
 		content: 'You should put some text about school related projects here.',
-		image: '/images/categories/cat1.png'
+		image: '/images/categories/cat1.jpg'
 	},
 	{
 		title: 'Offices',
 		content: 'You should put some text about office related projects here.',
-		image: '/images/categories/cat2.png'
+		image: '/images/categories/cat2.jpg'
 	},
 	{
 		title: 'Cultural Projects',
 		content: 'You should put some text about cultural related projects here. Like churches',
-		image: '/images/categories/cat3.png'
+		image: '/images/categories/cat3.jpg'
 	},
 	{
 		title: 'Student Guidance',
@@ -27,17 +27,17 @@ const categoryData: ProjectCategory[] = [
 	{
 		title: 'Local Authority Projects',
 		content: 'Check out the projects we did for local authorities',
-		image: '/images/categories/cat3.png'
+		image: '/images/categories/cat5.jpg'
 	},
 	{
 		title: 'Other projects',
 		content: 'You should put all other projects here',
-		image: '/images/categories/cat4.png'
+		image: '/images/categories/cat6.jpg'
 	},
 	{
 		title: 'Unrealized projects',
 		content: 'You should put text about unrealized projects here',
-		image: '/images/categories/cat2.png'
+		image: '/images/categories/cat7.png'
 	}
 ];
 // set the href for each category to the work page with the category as a query parameter
@@ -62,7 +62,7 @@ const slides: { image: string; title?: string; content?: string }[] = [
 	{ image: '/images/projects/Supersnack/gevelaanzicht ontworpen horeca gelegenheid Supersnack uit 2008.jpg' },
 	{ image: '/images/projects/Kwartslag/voorgevel.jpg' },
 	{
-		image: '/images/projects/4 villa\'s Lelystad/Picture11.png',
+		image: '/images/projects/4 Villa\'s Lelystad/Picture11.png',
 		title: '...',
 		content: 'This is the last slide'
 	}

@@ -22,13 +22,14 @@
 	$: current ? console.log(images[current]) : null;
 </script>
 
-<div class="slideshow" style="background-image: url('{images[current]}')">
+<div class="slideshow" >
+	<img src={images[current]} alt="Slideshow image">
 	{#if controllable}
 		<button class="controllable" on:click={() => slide(current - 1)}>
-			<i class="fas fa-chevron-left"></i>
+			<i class="fas fa-chevron-left" />
 		</button>
 		<button class="controllable" on:click={() => slide(current + 1)}>
-			<i class="fas fa-chevron-right"></i>
+			<i class="fas fa-chevron-right" />
 		</button>
 	{/if}
 	{#if titles[current]}
@@ -39,7 +40,7 @@
 	{/if}
 	<div class="dots">
 		{#each images as image, i}
-			<button class:current={i === current} on:click={() => slide(i)}></button>
+			<button class:current={i === current} on:click={() => slide(i)} />
 		{/each}
 	</div>
 </div>
@@ -47,16 +48,20 @@
 <style lang="scss">
 	@import '../colors';
 	.slideshow {
-		background-color: $dark-brown;
+		background-color: rgba(black, 0.7);
 		position: relative;
 		width: 100%;
 		height: 100%;
 		max-height: 70vh;
 		overflow: hidden;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		border-radius: 0.5rem;
+		border-radius: 0.25rem;
+		img {
+			position: absolute;
+			left: 10%;
+			width: 80%;
+			height: 100%;
+			object-fit: cover;
+		}
 		.title {
 			position: absolute;
 			top: 2%;
@@ -78,7 +83,7 @@
 			border-radius: 0.5rem;
 			font-size: 1.15rem;
 			color: $dark-brown;
-			background-color: rgba($light-brown, 0.35);
+			background-color: rgba($light-brown, 0.75);
 		}
 		.dots {
 			position: absolute;
@@ -106,7 +111,7 @@
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			background-color: rgba($dark-brown, 0.2);
+			background-color: rgba($dark-brown, 0.5);
 			border: none;
 			color: $light1;
 			font-size: 2em;
@@ -114,14 +119,14 @@
 			padding: 3rem 1rem;
 			&:hover {
 				color: $light2;
-				background-color: rgba($dark-brown, 0.5);
+				background-color: rgba($dark-brown, 0.75);
 			}
-			&:first-child {
+			&:first-of-type {
 				left: 0;
 				border-bottom-right-radius: 0.5rem;
 				border-top-right-radius: 0.5rem;
 			}
-			&:nth-child(2) {
+			&:nth-of-type(2) {
 				right: 0;
 				border-bottom-left-radius: 0.5rem;
 				border-top-left-radius: 0.5rem;
