@@ -160,7 +160,7 @@ export const projectData: Project[] = [
 			"/images/projects/4 Villa's Lelystad/Picture8.jpg",
 			"/images/projects/4 Villa's Lelystad/Picture9.jpg"
 		],
-		categories: [],
+		categories: [cats[5]],
 		location: '',
 		other: [{}]
 	},
@@ -229,7 +229,7 @@ export const projectData: Project[] = [
 			'/images/projects/Hillen & Roosen/voortgang sluiten gevel 2e verdoeping.jpg',
 			'/images/projects/Hillen & Roosen/zitjes.jpg'
 		],
-		categories: [],
+		categories: [cats[1]],
 		location: '',
 		other: [{}]
 	},
@@ -257,7 +257,7 @@ export const projectData: Project[] = [
 			'/images/projects/Kwartslag/voorgevel01.jpg',
 			'/images/projects/Kwartslag/zijbeuk tbv opslag.jpg'
 		],
-		categories: [],
+		categories: [cats[2]],
 		location: '',
 		other: [{}]
 	},
@@ -306,7 +306,7 @@ export const projectData: Project[] = [
 			'/images/projects/Redstone/restone 02.jpg',
 			'/images/projects/Redstone/restone detail 03.jpg'
 		],
-		categories: [],
+		categories: [cats[5]],
 		location: '',
 		other: [{}]
 	},
@@ -340,7 +340,7 @@ export const projectData: Project[] = [
 			'/images/projects/Supersnack/Picture3.jpg',
 			'/images/projects/Supersnack/Picture4.jpg'
 		],
-		categories: [],
+		categories: [cats[4]],
 		location: '',
 		other: [{}]
 	},
@@ -361,7 +361,7 @@ export const projectData: Project[] = [
 			'/images/projects/Zeevaarder/zijgevel.jpg',
 			'/images/projects/Zeevaarder/zijgevel.nabij hoofdentree.jpg'
 		],
-		categories: [],
+		categories: [cats[2]],
 		location: '',
 		other: [{}]
 	}
