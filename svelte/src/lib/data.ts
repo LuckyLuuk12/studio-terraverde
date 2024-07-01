@@ -6,17 +6,17 @@ const categoryData: ProjectCategory[] = [
 	{
 		title: 'Schools',
 		content: 'You should put some text about school related projects here.',
-		image: '/images/categories/cat1.png'
+		image: '/images/categories/cat1.jpg'
 	},
 	{
 		title: 'Offices',
 		content: 'You should put some text about office related projects here.',
-		image: '/images/categories/cat2.png'
+		image: '/images/categories/cat2.jpg'
 	},
 	{
 		title: 'Cultural Projects',
 		content: 'You should put some text about cultural related projects here. Like churches',
-		image: '/images/categories/cat3.png'
+		image: '/images/categories/cat3.jpg'
 	},
 	{
 		title: 'Student Guidance',
@@ -27,17 +27,17 @@ const categoryData: ProjectCategory[] = [
 	{
 		title: 'Local Authority Projects',
 		content: 'Check out the projects we did for local authorities',
-		image: '/images/categories/cat3.png'
+		image: '/images/categories/cat5.jpg'
 	},
 	{
 		title: 'Other projects',
 		content: 'You should put all other projects here',
-		image: '/images/categories/cat4.png'
+		image: '/images/categories/cat6.jpg'
 	},
 	{
 		title: 'Unrealized projects',
 		content: 'You should put text about unrealized projects here',
-		image: '/images/categories/cat2.png'
+		image: '/images/categories/cat7.png'
 	}
 ];
 // set the href for each category to the work page with the category as a query parameter
@@ -62,7 +62,7 @@ const slides: { image: string; title?: string; content?: string }[] = [
 	{ image: '/images/projects/Supersnack/gevelaanzicht ontworpen horeca gelegenheid Supersnack uit 2008.jpg' },
 	{ image: '/images/projects/Kwartslag/voorgevel.jpg' },
 	{
-		image: '/images/projects/4 villa\'s Lelystad/Picture11.png',
+		image: '/images/projects/4 Villa\'s Lelystad/Picture11.png',
 		title: '...',
 		content: 'This is the last slide'
 	}
@@ -160,7 +160,7 @@ export const projectData: Project[] = [
 			"/images/projects/4 Villa's Lelystad/Picture8.jpg",
 			"/images/projects/4 Villa's Lelystad/Picture9.jpg"
 		],
-		categories: [],
+		categories: [cats[5]],
 		location: '',
 		other: [{}]
 	},
@@ -229,7 +229,7 @@ export const projectData: Project[] = [
 			'/images/projects/Hillen & Roosen/voortgang sluiten gevel 2e verdoeping.jpg',
 			'/images/projects/Hillen & Roosen/zitjes.jpg'
 		],
-		categories: [],
+		categories: [cats[1]],
 		location: '',
 		other: [{}]
 	},
@@ -257,7 +257,7 @@ export const projectData: Project[] = [
 			'/images/projects/Kwartslag/voorgevel01.jpg',
 			'/images/projects/Kwartslag/zijbeuk tbv opslag.jpg'
 		],
-		categories: [],
+		categories: [cats[2]],
 		location: '',
 		other: [{}]
 	},
@@ -306,7 +306,7 @@ export const projectData: Project[] = [
 			'/images/projects/Redstone/restone 02.jpg',
 			'/images/projects/Redstone/restone detail 03.jpg'
 		],
-		categories: [],
+		categories: [cats[5]],
 		location: '',
 		other: [{}]
 	},
@@ -340,7 +340,7 @@ export const projectData: Project[] = [
 			'/images/projects/Supersnack/Picture3.jpg',
 			'/images/projects/Supersnack/Picture4.jpg'
 		],
-		categories: [],
+		categories: [cats[4]],
 		location: '',
 		other: [{}]
 	},
@@ -361,7 +361,7 @@ export const projectData: Project[] = [
 			'/images/projects/Zeevaarder/zijgevel.jpg',
 			'/images/projects/Zeevaarder/zijgevel.nabij hoofdentree.jpg'
 		],
-		categories: [],
+		categories: [cats[2]],
 		location: '',
 		other: [{}]
 	}
