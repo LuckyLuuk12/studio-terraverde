@@ -14,6 +14,7 @@
 <style lang="scss">
 	@import '../../colors';
 	.studies {
+		background-color: rgba($light-brown, 0.2);
 		border-radius: 1rem;
 		padding: 1rem;
 		border: 1px solid rgba(0, 0, 0, 0.1);
