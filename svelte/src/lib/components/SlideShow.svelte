@@ -19,9 +19,10 @@
 		setTimeout(autoSlide, interval);
 	}
 	onMount(autoSlide);
+	$: current ? console.log(images[current]) : null;
 </script>
 
-<div class="slideshow" style="background-image: url({images[current]})">
+<div class="slideshow" style="background-image: url('{images[current]}')">
 	{#if controllable}
 		<button class="controllable" on:click={() => slide(current - 1)}>
 			<i class="fas fa-chevron-left"></i>

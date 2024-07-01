@@ -14,7 +14,12 @@
 </svelte:head>
 
 <div class="content">
-	<SlideShow images={slides.map(s=>s.image)} titles={slides.map(s=>s?.title)} contents={slides.map(s=>s?.content)}/>
+	<SlideShow
+		images={slides.map((s) => s.image)}
+		titles={slides.map((s) => s?.title)}
+		contents={slides.map((s) => s?.content)}
+		auto
+	/>
 </div>
 
 <style>

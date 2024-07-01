@@ -26,7 +26,7 @@
 		}
 		if (!hamburgerContent || !window) return;
 		let screenWidth = window.innerWidth;
-		style = screenWidth <= 800 && unfolded ? 'display: contents;' : 'display: none';
+		style = screenWidth <= 850 && unfolded ? 'display: contents;' : 'display: none';
 	}
 	function toggleFold(event: MouseEvent) {
 		if (!nav) return;
@@ -126,7 +126,7 @@
 				<a href="/references">references</a>
 				<a href="/ambitions">ambitions</a>
 			</div>
-<!--	TODO: fix multiple foldable containers overlapping each other		-->
+			<!--	TODO: fix multiple foldable containers overlapping each other		-->
 		</div>
 
 		<a href="/about">about</a>
@@ -157,6 +157,7 @@
 		border-bottom: 1px solid rgba($dark-brown, 0.05);
 		//text-transform: capitalize;
 		.foldable {
+			padding: 0 0 3px 0;
 			.button {
 				cursor: pointer;
 			}
@@ -217,6 +218,7 @@
 		img {
 			max-height: 4rem;
 			padding-left: 0;
+			//background-color: $dark-brown;
 		}
 	}
 	.page {
@@ -226,12 +228,12 @@
 		max-width: 100vw;
 		z-index: 0;
 	}
-	@media only screen and (min-width: 800px) {
+	@media only screen and (min-width: 850px) {
 		.hamburger-content {
 			display: contents !important;
 		}
 	}
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 850px) {
 		nav {
 			justify-content: unset;
 			flex-direction: column;
@@ -239,7 +241,8 @@
 			//align-items: stretch;
 			height: fit-content;
 			max-height: unset;
-			a, span {
+			a,
+			span {
 				margin: 0.2rem 6.5rem;
 			}
 			.content a {

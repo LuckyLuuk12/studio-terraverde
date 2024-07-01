@@ -381,3 +381,6 @@ dist
 gen
 ### dotenv template
 
+
+### Ignore the generated projects.ts which was only used to quickly convert folder structure to typescript array
+svelte/src/lib/projects.ts
