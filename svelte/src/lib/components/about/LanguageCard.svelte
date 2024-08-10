@@ -33,7 +33,7 @@
 				border-radius: 1rem;
 				background-size: 200% 100%;
 				border: 1px solid rgba($light3, 0.2);
-				animation: pulse 3.5s linear infinite;
+				animation: pulse 20s linear infinite;
 			}
 		}
 	}
