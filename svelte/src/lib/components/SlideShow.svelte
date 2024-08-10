@@ -183,6 +183,9 @@
 			color: $dark-brown;
 			background-color: rgba($light2, 0.2);
 		}
+		&:hover .dots {
+			display: flex;
+		}
 		.dots {
 			position: absolute;
 			max-width: 100%;
@@ -190,7 +193,7 @@
 			z-index: 11;
 			left: 0;
 			//transform: translateX(-50%);
-			display: flex;
+			display: none;
 			width: 100%;
 			button {
 				width: 100%;
