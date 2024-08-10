@@ -32,6 +32,9 @@
 		width: 30vw;
 		position: relative;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		@media (max-width: 900px) {
+			width: 100%;
+		}
 		img {
 			width: 100%;
 			height: 60%;
@@ -43,24 +46,21 @@
 			background-color: $light2;
 			padding: 1rem;
 			border-radius: 0.5rem;
-			
-			position: absolute;
-			top: 75%;
-			transform: translateY(-50%);
+			margin: -15% 0;
 			width: 70%;
+			max-height: 50%;
 			text-align: center;
+			overflow: hidden;
 			h4 {
 				margin: 0;
-				font-size: 1.5rem;
 				color: $dark-brown;
 			}
 			h6 {
 				margin: 0.5rem 0;
-				font-size: 0.8rem;
 				color: $dark-brown;
 			}
 			button {
-				margin-top: 1rem;
+				margin: 1rem;
 				padding: 0.5rem 1rem;
 				background: linear-gradient(135deg, darken($accent1, 10%) 0%, darken($accent1, 40%) 100%);
 				color: white;

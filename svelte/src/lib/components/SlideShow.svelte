@@ -113,21 +113,21 @@
 					left: 0;
 					z-index: 10;
 					background-color: $light1;
-					clip-path: polygon(0 0, 100% 0, 50% 85%);
+					clip-path: polygon(0 0, 100% 0, 50% 80%);
 				}
 				&:nth-of-type(2) {
 					top: 0;
 					left: 0;
 					z-index: 5;
 					background-color: rgba($light1, 0.2);
-					clip-path: polygon(0 0, 0 50%, 50% 85%, 100% 50%, 100% 0);
+					clip-path: polygon(0 0, 0 40%, 50% 80%, 100% 40%, 100% 0);
 				}
 				&:nth-of-type(3) {
 					top: 0;
 					left: 0;
 					z-index: 2;
 					background-color: rgba($light1, 0.05);
-					clip-path: polygon(0 0, 0 70%, 50% 85%, 100% 70%, 100% 0);
+					clip-path: polygon(0 0, 0 60%, 50% 80%, 100% 60%, 100% 0);
 				}
 				// And now upside down the same for the bottom
 				&:nth-of-type(4) {
@@ -135,21 +135,21 @@
 					right: 0;
 					z-index: 10;
 					background-color: $light1;
-					clip-path: polygon(0 100%, 100% 100%, 50% 15%);
+					clip-path: polygon(0 100%, 100% 100%, 50% 20%);
 				}
 				&:nth-of-type(5) {
 					bottom: 0;
 					right: 0;
 					z-index: 5;
 					background-color: rgba($light1, 0.2);
-					clip-path: polygon(0 100%, 0 50%, 50% 15%, 100% 50%, 100% 100%);
+					clip-path: polygon(0 100%, 0 60%, 50% 20%, 100% 60%, 100% 100%);
 				}
 				&:nth-of-type(6) {
 					bottom: 0;
 					right: 0;
 					z-index: 2;
 					background-color: rgba($light1, 0.05);
-					clip-path: polygon(0 100%, 0 30%, 50% 15%, 100% 30%, 100% 100%);
+					clip-path: polygon(0 100%, 0 40%, 50% 20%, 100% 40%, 100% 100%);
 				}
 			}
 			img {

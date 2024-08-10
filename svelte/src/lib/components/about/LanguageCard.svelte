@@ -18,6 +18,10 @@
 		padding: 1rem;
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		width: 30vw;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		@media (max-width: 900px) {
+			width: 100%;
+		}
 		.language {
 			width: 100%;
 			h4 {
@@ -28,7 +32,7 @@
 				height: 1rem;
 				border-radius: 1rem;
 				background-size: 200% 100%;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				border: 1px solid rgba($light3, 0.2);
 				animation: pulse 3.5s linear infinite;
 			}
 		}

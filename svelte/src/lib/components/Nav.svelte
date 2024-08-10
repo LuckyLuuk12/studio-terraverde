@@ -142,7 +142,7 @@
 	nav {
 		position: relative;
 		z-index: 10;
-		background-color: $light2;
+		background-color: $light1;
 		color: $dark-brown;
 		display: flex;
 		flex-wrap: wrap;
@@ -222,7 +222,7 @@
 		}
 	}
 	.page {
-		background-color: $light1;
+		//background-color: $light1;
 		position: relative;
 		min-height: 85vh;
 		max-width: 100vw;

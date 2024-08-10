@@ -29,6 +29,9 @@
 		flex-direction: column;
 		justify-content: space-around;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		@media (max-width: 900px) {
+			width: 100%;
+		}
 		.study {
 			background-color: $light2;
 			padding: 0.25rem 1.5rem 2.75rem 1rem;

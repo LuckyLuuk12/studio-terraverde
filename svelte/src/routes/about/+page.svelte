@@ -29,7 +29,7 @@
 	<meta name="description" content="All you want to know about me!" />
 </svelte:head>
 <main>
-	<ProfileCard name="Marchel van Oosten ~ 1957" src="/images/marchel.png" {txt} />
+	<ProfileCard name="Marchel van Oosten" src="/images/marchel.png" {txt} />
 	<LanguageCard languages={[['Dutch', 10], ['English', 8.5], ['German', 7], ['French', 6,7], ['Danish', 5], ['Italian', 5]]} />
 	<StudyCard {studies} {links} />
 </main>
@@ -39,6 +39,7 @@
 	main {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		gap: 0.5vw;
 		padding: 2% 3%;
