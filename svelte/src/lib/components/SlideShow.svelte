@@ -14,16 +14,14 @@
 	function slide(to: number = current + 1) {
 		const imgs = document ? document.images : [];
 		for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '0';
-		
-		setTimeout(() => {
-			current = mod(to, images.length);
-			for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '1';
-		}, 400);
-		
 		if (auto) {
 			clearTimeout(autoSlideTimeout);
 			autoSlideTimeout = setTimeout(() => autoSlide(current + 1), interval);
 		}
+		setTimeout(() => {
+			current = mod(to, images.length);
+			for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '1';
+		}, 400);
 	}
 	
 	function autoSlide(to: number = current + 1) {
