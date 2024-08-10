@@ -142,7 +142,7 @@
 	nav {
 		position: relative;
 		z-index: 10;
-		background-color: $light1;
+		background-color: darken($light1, 1%);
 		color: $dark-brown;
 		display: flex;
 		flex-wrap: wrap;
@@ -155,6 +155,7 @@
 		font-weight: 800;
 		font-size: 1.1rem;
 		border-bottom: 1px solid rgba($dark-brown, 0.05);
+		box-shadow: 0 0 10px rgba($dark-brown, 0.1);
 		//text-transform: capitalize;
 		.foldable {
 			padding: 0 0 3px 0;

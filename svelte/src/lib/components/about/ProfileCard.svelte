@@ -43,7 +43,7 @@
 			border-top-right-radius: 1rem;
 		}
 		.text-container {
-			background-color: $light2;
+			background-color: $light1;
 			padding: 1rem;
 			border-radius: 0.5rem;
 			margin: -15% 0;

@@ -13,7 +13,7 @@
 <style lang="scss">
 	@import '../../colors';
 	.languages {
-		background-color: rgba($light-brown, 0.2);
+		background-color: rgba($light2, 0.2);
 		border-radius: 1rem;
 		padding: 1rem;
 		border: 1px solid rgba(0, 0, 0, 0.1);

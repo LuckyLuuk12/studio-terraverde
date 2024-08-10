@@ -33,7 +33,7 @@
 			width: 100%;
 		}
 		.study {
-			background-color: $light2;
+			background-color: $light1;
 			padding: 0.25rem 1.5rem 2.75rem 1rem;
 			border-radius: 0.5rem;
 			width: 100%;
