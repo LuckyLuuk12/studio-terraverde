@@ -4,39 +4,43 @@ import type { ProjectCategory, Project } from '$lib/types';
 // Data for the project categories
 const categoryData: ProjectCategory[] = [
 	{
+		title: 'Working on now',
+		content: 'As full-time passionate dedicated architect, I am always busy working on my next great creation. Check out the projects I am currently working on.',
+		image: '/images/categories/cat0.jpg'
+	},
+	{
 		title: 'Schools',
-		content: 'You should put some text about school related projects here.',
+		content: 'Schools are so important, they bring the future. That\'s why I am happy I could work on some of them. Check them out here',
 		image: '/images/categories/cat1.jpg'
 	},
 	{
 		title: 'Offices',
-		content: 'You should put some text about office related projects here.',
+		content: 'Offices, as well, are a very important aspect of our lives. Check out the offices I have worked on.',
 		image: '/images/categories/cat2.jpg'
 	},
 	{
 		title: 'Cultural Projects',
-		content: 'You should put some text about cultural related projects here. Like churches',
+		content: 'Cultural projects are very important for the (local) community. Check out the cultural projects I have worked on.',
 		image: '/images/categories/cat3.jpg'
 	},
 	{
 		title: 'Student Guidance',
-		content:
-			'I also guided some students in their projects. See how they performed and what they did',
+		content: 'I also guided some students in their projects. See how they performed, what they did and how I helped them.',
 		image: '/images/categories/cat1.png'
 	},
 	{
 		title: 'Local Authority Projects',
-		content: 'Check out the projects we did for local authorities',
+		content: 'I also worked on some projects for which the local authority personally asked me. Check them out here.',
 		image: '/images/categories/cat5.jpg'
 	},
 	{
 		title: 'Other projects',
-		content: 'You should put all other projects here',
+		content: 'I have even more projects which are too special to put into a category. Check them out here.',
 		image: '/images/categories/cat6.jpg'
 	},
 	{
 		title: 'Unrealized projects',
-		content: 'You should put text about unrealized projects here',
+		content: 'Sadly, not all projects are realized. Check out the projects that never saw the light of day.',
 		image: '/images/categories/cat7.png'
 	}
 ];
