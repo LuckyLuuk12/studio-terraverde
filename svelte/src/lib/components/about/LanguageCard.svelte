@@ -24,10 +24,22 @@
 				margin: 1rem 0 0.5rem 0;
 			}
 			.level {
-				background-color: $accent2;
+				background: linear-gradient(90deg, $accent2 0%, $accent2 45%, lighten($accent2, 10%) 50%, $accent2 55%, $accent2 100%);
 				height: 1rem;
 				border-radius: 1rem;
+				background-size: 200% 100%;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				animation: pulse 3.5s linear infinite;
 			}
+		}
+	}
+	
+	@keyframes pulse {
+		0% {
+			background-position: 100% 0;
+		}
+		100% {
+			background-position: 0 0;
 		}
 	}
 </style>
