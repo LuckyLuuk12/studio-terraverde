@@ -4,7 +4,7 @@
 	export let images: string[];
 	export let titles: string[] = [];
 	export let contents: string[] = [];
-	export let interval: number = 10000;
+	export let interval: number = 40000;
 	export let controllable: boolean = true;
 	export let auto: boolean = false;
 
@@ -18,12 +18,28 @@
 		slide();
 		setTimeout(autoSlide, interval);
 	}
+	function mod(n: number, m: number) {
+		return ((n % m) + m) % m;
+	}
+	
 	onMount(autoSlide);
 	$: current ? console.log(images[current]) : null;
 </script>
 
 <div class="slideshow" >
-	<img src={images[current]} alt="Slideshow image">
+	<div class="images">
+		<div class="overlay" />
+		<div class="overlay" />
+		<div class="overlay" />
+		<img src={images[mod(current-2, images.length)]} alt="Slideshow image {mod(current-2, images.length)}">
+		<img src={images[mod(current-1, images.length)]} alt="Slideshow image {mod(current-1, images.length)}">
+		<img src={images[current]} alt="Slideshow image {current}">
+		<img src={images[mod(current+1, images.length)]} alt="Slideshow image {mod(current+1, images.length)}">
+		<img src={images[mod(current+2, images.length)]} alt="Slideshow image {mod(current+2, images.length)}">
+		<div class="overlay" />
+		<div class="overlay" />
+		<div class="overlay" />
+	</div>
 	{#if controllable}
 		<button class="controllable" on:click={() => slide(current - 1)}>
 			<i class="fas fa-chevron-left" />
@@ -55,17 +71,81 @@
 		max-height: 70vh;
 		overflow: hidden;
 		border-radius: 0.25rem;
-		img {
-			position: absolute;
-			left: 10%;
-			width: 80%;
+		.images {
+			display: flex;
+			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			img {
+				animation: flipIn 1.6s ease-in-out;
+			}
+			@keyframes flipIn {
+				0% {
+					transform: rotateX(45deg) rotateY(90deg);
+					opacity: 0;
+				}
+				100% {
+					transform: rotateX(0) rotateY(0);
+					opacity: 1;
+				}
+			}
+			.overlay {
+				position: absolute;
+				width: 100%;
+				height: 10%;
+				&:nth-of-type(1) {
+					top: 0;
+					left: 0;
+					z-index: 10;
+					background-color: $light1;
+					clip-path: polygon(0 0, 100% 0, 50% 85%);
+				}
+				&:nth-of-type(2) {
+					top: 0;
+					left: 0;
+					z-index: 5;
+					background-color: rgba($light1, 0.2);
+					clip-path: polygon(0 0, 0 50%, 50% 85%, 100% 50%, 100% 0);
+				}
+				&:nth-of-type(3) {
+					top: 0;
+					left: 0;
+					z-index: 2;
+					background-color: rgba($light1, 0.05);
+					clip-path: polygon(0 0, 0 70%, 50% 85%, 100% 70%, 100% 0);
+				}
+				// And now upside down the same for the bottom
+				&:nth-of-type(4) {
+					bottom: 0;
+					right: 0;
+					z-index: 10;
+					background-color: $light1;
+					clip-path: polygon(0 100%, 100% 100%, 50% 15%);
+				}
+				&:nth-of-type(5) {
+					bottom: 0;
+					right: 0;
+					z-index: 5;
+					background-color: rgba($light1, 0.2);
+					clip-path: polygon(0 100%, 0 50%, 50% 15%, 100% 50%, 100% 100%);
+				}
+				&:nth-of-type(6) {
+					bottom: 0;
+					right: 0;
+					z-index: 2;
+					background-color: rgba($light1, 0.05);
+					clip-path: polygon(0 100%, 0 30%, 50% 15%, 100% 30%, 100% 100%);
+				}
+			}
+			img {
+				width: 20%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 		.title {
 			position: absolute;
 			top: 2%;
-			left: 2%;
+			left: 40%;
 			color: $light1;
 			font-size: 2rem;
 			text-shadow:
@@ -77,33 +157,35 @@
 		.content {
 			position: absolute;
 			bottom: 13%;
-			right: 15%;
-			max-width: 33%;
+			right: 40%;
+			max-width: 20%;
 			padding: 1rem;
 			border-radius: 0.5rem;
 			font-size: 1.15rem;
 			color: $dark-brown;
-			background-color: rgba($light-brown, 0.75);
+			background-color: rgba($light2, 0.2);
 		}
 		.dots {
 			position: absolute;
 			max-width: 100%;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
+			bottom: -1.5rem;
+			z-index: 11;
+			left: 0;
+			//transform: translateX(-50%);
 			display: flex;
+			width: 100%;
 			button {
-				width: 1rem;
+				width: 100%;
 				height: 1rem;
-				background-color: $light1;
-				border-radius: 50%;
-				margin: 0 0.5rem 1rem 0.5rem;
+				background-color: rgba($light3, 0.5);
+				border-radius: 2px;
+				margin: 0 0.125rem 1rem 0.125rem;
 				cursor: pointer;
 				&:hover {
-					background-color: $light2;
+					background-color: rgba($light3, 0.2);
 				}
 				&.current {
-					background-color: $light3;
+					background-color: rgba($light3, 0.9);
 				}
 			}
 		}
@@ -111,15 +193,15 @@
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			background-color: rgba($dark-brown, 0.5);
 			border: none;
 			color: $light1;
 			font-size: 2em;
 			cursor: pointer;
 			padding: 3rem 1rem;
+			text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 			&:hover {
 				color: $light2;
-				background-color: rgba($dark-brown, 0.75);
+				text-shadow: 2px 2px 3px black, -2px -2px 3px black, 2px -2px 3px black, -2px 2px 3px black;
 			}
 			&:first-of-type {
 				left: 0;

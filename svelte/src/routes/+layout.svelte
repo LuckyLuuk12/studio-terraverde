@@ -14,6 +14,6 @@
 <style>
 	.page-content {
 		min-height: 65vh;
-		padding: 2% 3%;
+		padding: 2% 0;
 	}
 </style>
