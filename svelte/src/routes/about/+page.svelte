@@ -15,6 +15,13 @@
 		['MBO diploma', '1971-1976']
 	];
 	
+	const links = [
+		'https://www.ou.nl/opleiding?opleiding=Projectmanagement',
+		'https://www.hku.nl/',
+		'https://www.univ-orleans.fr/',
+		'https://www.roc.nl/'
+	];
+	
 </script>
 
 <svelte:head>
@@ -24,7 +31,7 @@
 <main>
 	<ProfileCard name="Marchel van Oosten ~ 1957" src="/images/marchel.png" {txt} />
 	<LanguageCard languages={[['Dutch', 10], ['English', 8.5], ['German', 7], ['French', 6,7], ['Danish', 5], ['Italian', 5]]} />
-	<StudyCard {studies} />
+	<StudyCard {studies} {links} />
 </main>
 
 
@@ -34,5 +41,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		gap: 0.5vw;
+		padding: 2% 3%;
 	}
 </style>
