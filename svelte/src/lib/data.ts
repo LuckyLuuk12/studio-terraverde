@@ -52,20 +52,12 @@ export const cats: ProjectCategory[] = categoryData.map((cat) => {
 
 // Slides for the home page slideshow
 const slides: { image: string; title?: string; content?: string }[] = [
-	{
-		image: '/images/projects/Hillen & Roosen/Gevel Hillen & Roosen.jpg',
-		title: 'Hillen & Roosen',
-		content: 'Hillen & Roosen is a construction company in Amsterdam'
-	},
+	{ image: '/images/projects/Hillen & Roosen/Gevel Hillen & Roosen.jpg' },
 	{ image: '/images/projects/Redstone/restone 02.jpg' },
 	{ image: '/images/projects/OBS Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten.jpg' },
 	{ image: '/images/projects/Supersnack/gevelaanzicht ontworpen horeca gelegenheid Supersnack uit 2008.jpg' },
 	{ image: '/images/projects/Kwartslag/voorgevel.jpg' },
-	{
-		image: '/images/projects/4 Villa\'s Lelystad/Picture11.png',
-		title: '...',
-		content: 'This is the last slide'
-	}
+	{ image: '/images/projects/4 Villa\'s Lelystad/Picture11.png' }
 ];
 
 export const projectData: Project[] = [

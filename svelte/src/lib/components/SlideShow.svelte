@@ -4,26 +4,42 @@
 	export let images: string[];
 	export let titles: string[] = [];
 	export let contents: string[] = [];
-	export let interval: number = 40000;
+	export let interval: number = 10000;
 	export let controllable: boolean = true;
 	export let auto: boolean = false;
 
 	$: current = 0;
+	let autoSlideTimeout;
+	
 	function slide(to: number = current + 1) {
-		if (to < 0) to = images.length - 1;
-		current = to % images.length;
+		const imgs = document ? document.images : [];
+		for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '0';
+		
+		setTimeout(() => {
+			current = mod(to, images.length);
+			for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '1';
+		}, 400);
+		
+		if (auto) {
+			clearTimeout(autoSlideTimeout);
+			autoSlideTimeout = setTimeout(() => autoSlide(current + 1), interval);
+		}
 	}
-	function autoSlide() {
-		if (!auto) return;
-		slide();
-		setTimeout(autoSlide, interval);
+	
+	function autoSlide(to: number = current + 1) {
+		current = mod(to, images.length);
+		slide(mod(to, images.length));
 	}
+	
 	function mod(n: number, m: number) {
 		return ((n % m) + m) % m;
 	}
 	
-	onMount(autoSlide);
-	$: current ? console.log(images[current]) : null;
+	onMount(() => {
+		if (auto) {
+			autoSlideTimeout = setTimeout(autoSlide, interval);
+		}
+	});
 </script>
 
 <div class="slideshow" >
@@ -44,7 +60,7 @@
 		<button class="controllable" on:click={() => slide(current - 1)}>
 			<i class="fas fa-chevron-left" />
 		</button>
-		<button class="controllable" on:click={() => slide(current + 1)}>
+		<button class="controllable" on:click={() => slide()}>
 			<i class="fas fa-chevron-right" />
 		</button>
 	{/if}
@@ -67,15 +83,17 @@
 		background-color: rgba(black, 0.7);
 		position: relative;
 		width: 100%;
-		height: 100%;
-		max-height: 70vh;
+		height: 60vh;
 		overflow: hidden;
 		border-radius: 0.25rem;
 		.images {
 			display: flex;
+			flex-wrap: wrap;
 			width: 100%;
 			height: 100%;
+			
 			img {
+				transition: all 0.4s ease;
 				animation: flipIn 1.6s ease-in-out;
 			}
 			@keyframes flipIn {
@@ -212,6 +230,36 @@
 				right: 0;
 				border-bottom-left-radius: 0.5rem;
 				border-top-left-radius: 0.5rem;
+			}
+		}
+	}
+	
+	@media (max-width: 900px) {
+		.slideshow {
+			.images {
+				img {
+					width: 33.333%;
+				}
+			}
+		}
+	}
+	
+	@media (max-width: 768px) {
+		.slideshow {
+			.images {
+				img {
+					width: 50%;
+				}
+			}
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.slideshow {
+			.images {
+				img {
+					width: 100%;
+				}
 			}
 		}
 	}
