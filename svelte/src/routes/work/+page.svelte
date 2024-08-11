@@ -25,6 +25,14 @@
 
 <div class="content">
 	{#if !selectedCategory && !selectedProject}
+		<h3>My work</h3>
+		<span>
+			I have been designing <b>over 30 projects</b> of which at least <b>10 have been realised</b>.<br>
+			There are also around <b>4 projects</b> that still need to be realised.<br>
+			Here you can find a selection of the projects I have worked on, nicely categorised into the<br>
+			different types of projects which I considered <b>important for society</b>.
+			
+		</span>
 		{#each cats as category}
 			<Card {category} />
 		{/each}
@@ -37,6 +45,7 @@
 		{/each}
 	{/if}
 	{#if selectedCategory && !selectedProject}
+		<h3>{selectedCategory}</h3>
 		{#each pros as project}
 			{#if project.categories.map((c) => c.title).includes(selectedCategory)}
 				<Card
@@ -58,5 +67,16 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		h3 {
+			text-align: center;
+			width: 100%;
+		}
+		span {
+			text-align: center;
+			width: 60%;
+			font-size: 0.8rem;
+			margin: 1% 20%;
+			color: lighten($light3, 20%);
+		}
 	}
 </style>

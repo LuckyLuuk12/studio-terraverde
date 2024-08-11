@@ -26,7 +26,7 @@ const categoryData: ProjectCategory[] = [
 	{
 		title: 'Student Guidance',
 		content: 'I also guided some students in their projects. See how they performed, what they did and how I helped them.',
-		image: '/images/categories/cat1.png'
+		image: '/images/categories/cat4.png'
 	},
 	{
 		title: 'Local Authority Projects',
@@ -81,7 +81,7 @@ export const projectData: Project[] = [
 			"/images/projects/4 Villa's Lelystad/Picture8.jpg",
 			"/images/projects/4 Villa's Lelystad/Picture9.jpg"
 		],
-		categories: [cats[5]],
+		categories: [cats[6]],
 		location: '',
 		other: [{}]
 	},
@@ -150,7 +150,7 @@ export const projectData: Project[] = [
 			'/images/projects/Hillen & Roosen/voortgang sluiten gevel 2e verdoeping.jpg',
 			'/images/projects/Hillen & Roosen/zitjes.jpg'
 		],
-		categories: [cats[1]],
+		categories: [cats[2]],
 		location: '',
 		other: [{}]
 	},
@@ -178,7 +178,7 @@ export const projectData: Project[] = [
 			'/images/projects/Kwartslag/voorgevel01.jpg',
 			'/images/projects/Kwartslag/zijbeuk tbv opslag.jpg'
 		],
-		categories: [cats[2]],
+		categories: [cats[3]],
 		location: '',
 		other: [{}]
 	},
@@ -210,7 +210,7 @@ export const projectData: Project[] = [
 			'/images/projects/OBS Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten 01.jpg',
 			'/images/projects/OBS Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten.jpg'
 		],
-		categories: [cats[0]],
+		categories: [cats[1]],
 		location: '',
 		other: [{}]
 	},
@@ -227,7 +227,7 @@ export const projectData: Project[] = [
 			'/images/projects/Redstone/restone 02.jpg',
 			'/images/projects/Redstone/restone detail 03.jpg'
 		],
-		categories: [cats[5]],
+		categories: [cats[6]],
 		location: '',
 		other: [{}]
 	},
@@ -239,7 +239,7 @@ export const projectData: Project[] = [
 			'/images/projects/School Tollebeek/voorgevel 02.jpg',
 			'/images/projects/School Tollebeek/voorgevel.jpg'
 		],
-		categories: [cats[0]],
+		categories: [cats[1]],
 		location: '',
 		other: [{}]
 	},
@@ -247,7 +247,7 @@ export const projectData: Project[] = [
 		title: 'skn',
 		description: 'This is the project named skn',
 		images: [],
-		categories: [cats[0]],
+		categories: [cats[1]],
 		location: '',
 		other: [{}]
 	},
@@ -261,7 +261,7 @@ export const projectData: Project[] = [
 			'/images/projects/Supersnack/Picture3.jpg',
 			'/images/projects/Supersnack/Picture4.jpg'
 		],
-		categories: [cats[4]],
+		categories: [cats[5]],
 		location: '',
 		other: [{}]
 	},
@@ -282,7 +282,7 @@ export const projectData: Project[] = [
 			'/images/projects/Zeevaarder/zijgevel.jpg',
 			'/images/projects/Zeevaarder/zijgevel.nabij hoofdentree.jpg'
 		],
-		categories: [cats[2]],
+		categories: [cats[3]],
 		location: '',
 		other: [{}]
 	}

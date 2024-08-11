@@ -3,14 +3,14 @@
 	import LanguageCard from '$lib/components/about/LanguageCard.svelte';
 	import StudyCard from '$lib/components/about/StudyCard.svelte';
 
-	const txt = 'Project manager with broad experience in construction and real estate management ' +
-		'and an architectural background that can be used to closely manage projects of architectural ' +
-		'importance from the start of the construction process to delivery.Team player. ' +
+	const txt = 'Project manager with broad experience in construction and real estate management. ' +
+		'An architectural background that perfectly fits to closely manage projects of architectural ' +
+		'importance. From the start of the construction process its delivery. Team player. ' +
 		'Curious and observant with natural helicopter view.';
 	
 	const studies = [
 		['Projectmanagement Open Universiteit', '1995-1996'],
-		['University of Arts Utrecht', '1982-1988'],
+		['University of Arts Utrecht - Faculteit Architectuur', '1982-1988'],
 		['Instituut voor Architectuur te Orléans (Frankrijk)', '1980-1982'],
 		['MBO diploma', '1971-1976']
 	];

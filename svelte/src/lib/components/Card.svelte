@@ -23,6 +23,7 @@
 		position: relative;
 		height: 30rem;
 		width: 20rem;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		img {
 			position: absolute;
 			z-index: -1;
