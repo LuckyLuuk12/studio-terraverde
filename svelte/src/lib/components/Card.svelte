@@ -39,7 +39,7 @@
 		}
 		.content {
 			background: rgba($light-brown, 0.7);
-			color: $dark-brown;
+			color: lighten($light3, 10%);
 			position: absolute;
 			padding: 0.5rem;
 			width: 100%;

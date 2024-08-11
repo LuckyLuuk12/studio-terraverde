@@ -43,7 +43,12 @@
 		{/each}
 	{/if}
 	{#if selectedCategory && !selectedProject}
-		<h3>{selectedCategory}</h3>
+		<h3><a href="/work">My Work </a> <i class="fa fa-solid fa-arrow-right" /> {selectedCategory}</h3>
+		{#each cats as category}
+			{#if category?.title === selectedCategory}
+				<span>{category?.content}</span>
+			{/if}
+		{/each}
 		{#each pros as project}
 			{#if project.categories.map((c) => c.title).includes(selectedCategory)}
 				<Card
@@ -68,6 +73,10 @@
 		h3 {
 			text-align: center;
 			width: 100%;
+			a {
+				color: $dark-brown;
+				text-decoration: none;
+			}
 		}
 		span {
 			text-align: center;
