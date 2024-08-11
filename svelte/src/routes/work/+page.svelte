@@ -14,8 +14,6 @@
 		selectedCategory = new URLSearchParams(v.url.search)?.get('c')?.replaceAll('+', ' ').replaceAll('|', '&');
 		selectedProject = new URLSearchParams(v.url.search)?.get('p')?.replaceAll('+', ' ').replaceAll('|', '&');
 	});
-	
-	$: console.log(selectedCategory, selectedProject);
 </script>
 
 <svelte:head>
