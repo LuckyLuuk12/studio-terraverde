@@ -162,7 +162,7 @@ export const projectData: Project[] = [
 		title: 'Hoofdkantoor Electro Lux',
 		description: 'This is the project named Electro Lux',
 		images: pData.filter((p) => p.title === 'Hoofdkantoor Electro Lux')[0]?.images ?? [],
-		categories: [cats[2]],
+		categories: [cats[7]],
 		location: '',
 		other: [{}]
 	},

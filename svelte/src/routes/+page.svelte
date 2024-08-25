@@ -15,18 +15,11 @@
 </svelte:head>
 
 <div class="content">
+	
 	<div class="full-page">
-		<SlideShow
-			images={slides.map((s) => s.image)}
-			titles={slides.map((s) => s?.title)}
-			contents={slides.map((s) => s?.content)}
-			auto
-		/>
-	</div>
-	<div class="full-page">
-		<SideBySide src="/images/projects/Hillen & Roosen/episch-model-h&r.gif" imgSize="55%">
+		<SideBySide src="/images/projects/Hillen & Roosen/episch-model-h&r.gif" imgSize="65%">
 			<div class="maquette">
-				<h2>How we work</h2>
+				<h3>How we work</h3>
 				<h1>The process of art</h1>
 				<p>
 					We examine every aspect of a construction project in all its complexity during the design
@@ -37,6 +30,14 @@
 				<a href="/work">View now</a>
 			</div>
 		</SideBySide>
+	</div>
+	<div class="full-page">
+		<SlideShow
+			images={slides.map((s) => s.image)}
+			titles={slides.map((s) => s?.title)}
+			contents={slides.map((s) => s?.content)}
+			auto
+		/>
 	</div>
 </div>
 
@@ -59,7 +60,7 @@
 				justify-content: center;
 				align-items: center;
 				text-align: center;
-				h2 {
+				h3 {
 					margin-bottom: 2rem;
 					color: rgba($light3, 0.75);
 				}
