@@ -66,30 +66,47 @@ export const cats: ProjectCategory[] = categoryData.map((cat) => {
 // Slides for the home page slideshow
 const slides: { image: string; title?: string; content?: string }[] = [
 	{ image: '/images/projects/Hillen & Roosen/Gevel Hillen & Roosen.jpg' },
-	{ image: '/images/projects/Redstone/restone 02.jpg' },
-	{ image: '/images/projects/OBS Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten.jpg' },
+	{ image: '/images/projects/Hoofdkantoor Redstone/restone 02.jpg' },
+	{ image: '/images/projects/OBS De Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten.jpg' },
 	{
 		image:
-			'/images/projects/Supersnack/gevelaanzicht ontworpen horeca gelegenheid Supersnack uit 2008.jpg'
+			'/images/projects/Winkelcentrum De Boogaard/voorkant-1.PNG'
 	},
-	{ image: '/images/projects/Kwartslag/voorgevel.jpg' },
-	{ image: "/images/projects/4 Villa's Lelystad/Picture11.png" }
+	{ image: '/images/projects/De Kwartslag/voorgevel.jpg' },
+	{ image: "/images/projects/Villa's Lelystad/Lelystad overhoeks opname.jpg" }
 ];
 
+// Data for the projects, including all images in the static/images/projects folder
 export const projectData: Project[] = [
 	{
-		title: "Villa's Lelystad",
-		description: "This is the project named 4 Villa's Lelystad",
-		images: pData.filter((p) => p.title === "Villa's Lelystad")[0]?.images ?? [],
-		categories: [cats[6]],
+		title: '8 Bedrijf units + overkapping',
+		description: 'This is the project named 8 Bedrijf units + overkapping',
+		images: pData.filter((p) => p.title === '8 Bedrijf units + overkapping')[0]?.images ?? [],
+		categories: [cats[0]],
 		location: '',
 		other: [{}]
 	},
 	{
-		title: 'Hillen & Roosen',
-		description: 'This is the project named Hillen & Roosen',
-		images: pData.filter((p) => p.title === 'Hillen & Roosen')[0]?.images ?? [],
-		categories: [cats[2]],
+		title: 'Autoboulevard Sloterdijk',
+		description: 'This is the project named Autoboulevard Sloterdijk',
+		images: pData.filter((p) => p.title === 'Autoboulevard Sloterdijk')[0]?.images ?? [],
+		categories: [cats[7]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Casa Surace',
+		description: 'This is the project named Casa Surace',
+		images: pData.filter((p) => p.title === 'Casa Surace')[0]?.images ?? [],
+		categories: [cats[3]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'De achterstraat te Alkmaar',
+		description: 'This is the project named De achterstraat te Alkmaar',
+		images: pData.filter((p) => p.title === 'De achterstraat te Alkmaar')[0]?.images ?? [],
+		categories: [cats[0]],
 		location: '',
 		other: [{}]
 	},
@@ -102,6 +119,94 @@ export const projectData: Project[] = [
 		other: [{}]
 	},
 	{
+		title: 'De Wissel',
+		description: 'This is the project named De Wissel',
+		images: pData.filter((p) => p.title === 'De Wissel')[0]?.images ?? [],
+		categories: [cats[1]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'De Zeevaarder',
+		description: 'This is the project named Zeevaarder',
+		images: pData.filter((p) => p.title === 'De Zeevaarder')[0]?.images ?? [],
+		categories: [cats[3]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Feestzaal',
+		description: 'This is the project named Feestzaal',
+		images: pData.filter((p) => p.title === 'Feestzaal')[0]?.images ?? [],
+		categories: [cats[3]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Gedempte nieuwe sloot - Alkmaar',
+		description: 'This is the project named Gedempte nieuwe sloot - Alkmaar',
+		images: pData.filter((p) => p.title === 'Gedempte nieuwe sloot - Alkmaar')[0]?.images ?? [],
+		categories: [cats[0]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Hillen & Roosen',
+		description: 'This is the project named Hillen & Roosen',
+		images: pData.filter((p) => p.title === 'Hillen & Roosen')[0]?.images ?? [],
+		categories: [cats[2]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Hoofdkantoor Electro Lux',
+		description: 'This is the project named Electro Lux',
+		images: pData.filter((p) => p.title === 'Hoofdkantoor Electro Lux')[0]?.images ?? [],
+		categories: [cats[2]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Hoofdkantoor Redstone',
+		description: 'This is the project named Redstone',
+		images: pData.filter((p) => p.title === 'Hoofdkantoor Redstone')[0]?.images ?? [],
+		categories: [cats[2]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Houtwal',
+		description: 'This is the project named Houtwal',
+		images: pData.filter((p) => p.title === 'Houtwal')[0]?.images ?? [],
+		categories: [cats[0]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Kleurrijk Wonen',
+		description: 'This is the project named Kleurrijk Wonen',
+		images: pData.filter((p) => p.title === 'Kleurrijk Wonen')[0]?.images ?? [],
+		categories: [cats[5]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Minaret solimee moskee',
+		description: 'This is the project named Minaret solimee moskee',
+		images: pData.filter((p) => p.title === 'Minaret solimee moskee')[0]?.images ?? [],
+		categories: [cats[3]],
+		location: 'Haarlem',
+		other: [{}]
+	},
+	{
+		title: 'Minderhoutschool',
+		description: 'This is the project named Minderhoutschool',
+		images: pData.filter((p) => p.title === 'Minderhoutschool')[0]?.images ?? [],
+		categories: [cats[1]],
+		location: '',
+		other: [{}]
+	},
+	{
 		title: 'OBS De Zevensprong',
 		description: 'This is the project named OBS Zevensprong',
 		images: pData.filter((p) => p.title === 'OBS De Zevensprong')[0]?.images ?? [],
@@ -110,10 +215,26 @@ export const projectData: Project[] = [
 		other: [{}]
 	},
 	{
-		title: 'Hoofdkantoor Redstone',
-		description: 'This is the project named Redstone',
-		images: pData.filter((p) => p.title === 'Hoofdkantoor Redstone')[0]?.images ?? [],
+		title: 'Pizza Place',
+		description: 'This is the project named Pizza Place',
+		images: pData.filter((p) => p.title === 'Pizza Place')[0]?.images ?? [],
+		categories: [cats[3]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Plompertstraat',
+		description: 'This is the project named Plompertstraat',
+		images: pData.filter((p) => p.title === 'Plompertstraat')[0]?.images ?? [],
 		categories: [cats[6]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Roza Vastgoed',
+		description: 'This is the project named Roza Vastgoed',
+		images: pData.filter((p) => p.title === 'Roza Vastgoed')[0]?.images ?? [],
+		categories: [cats[3]],
 		location: '',
 		other: [{}]
 	},
@@ -126,6 +247,14 @@ export const projectData: Project[] = [
 		other: [{}]
 	},
 	{
+		title: 'Srebrenica Kuuroord',
+		description: 'This is the project named Srebrenica Kuuroord',
+		images: pData.filter((p) => p.title === 'Srebrenica Kuuroord')[0]?.images ?? [],
+		categories: [cats[0]],
+		location: '',
+		other: [{}]
+	},
+	{
 		title: 'Supersnack',
 		description: 'This is the project named Supersnack',
 		images: pData.filter((p) => p.title === 'Supersnack')[0]?.images ?? [],
@@ -134,13 +263,70 @@ export const projectData: Project[] = [
 		other: [{}]
 	},
 	{
-		title: 'De Zeevaarder',
-		description: 'This is the project named Zeevaarder',
-		images: pData.filter((p) => p.title === 'De Zeevaarder')[0]?.images ?? [],
-		categories: [cats[3]],
+		title: 'Uitbreiding Woonhuis Te Gorssel',
+		description: 'This is the project named Uitbreiding Woonhuis Te Gorssel',
+		images: pData.filter((p) => p.title === 'Uitbreiding Woonhuis Te Gorssel')[0]?.images ?? [],
+		categories: [cats[6]],
+		location: 'Gorssel',
+		other: [{}]
+	},
+	{
+		title: "Villa's Lelystad",
+		description: "This is the project named 4 Villa's Lelystad",
+		images: pData.filter((p) => p.title === "Villa's Lelystad")[0]?.images ?? [],
+		categories: [cats[6]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Watervilla Lepelaar',
+		description: 'This is the project named Lepelaar',
+		images: pData.filter((p) => p.title === 'Watervilla Lepelaar')[0]?.images ?? [],
+		categories: [cats[7]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Winkelcentrum De Boogaard',
+		description: 'This is the project named Boogaard',
+		images: pData.filter((p) => p.title === 'Winkelcentrum De Boogaard')[0]?.images ?? [],
+		categories: [cats[5]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Winkelcentrum de Kolk',
+		description: 'This is the project named de Kolk',
+		images: pData.filter((p) => p.title === 'Winkelcentrum de Kolk')[0]?.images ?? [],
+		categories: [cats[5]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Winkelcentrum De Nieuwe Passage',
+		description: 'This is the project named De Nieuwe Passage',
+		images: pData.filter((p) => p.title === 'Winkelcentrum De Nieuwe Passage')[0]?.images ?? [],
+		categories: [cats[5]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Winkelstraat De Lange Nering',
+		description: 'This is the project named De Lange Nering',
+		images: pData.filter((p) => p.title === 'Winkelstraat De Lange Nering')[0]?.images ?? [],
+		categories: [cats[5]],
+		location: '',
+		other: [{}]
+	},
+	{
+		title: 'Woonboot',
+		description: 'This is the project named Woonboot',
+		images: pData.filter((p) => p.title === 'Woonboot')[0]?.images ?? [],
+		categories: [cats[6]],
 		location: '',
 		other: [{}]
 	}
+
 ];
 
 export const categories: Writable<ProjectCategory[]> = writable<ProjectCategory[]>(cats);

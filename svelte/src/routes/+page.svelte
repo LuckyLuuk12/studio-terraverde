@@ -24,7 +24,7 @@
 		/>
 	</div>
 	<div class="full-page">
-		<SideBySide src="/images/marchel.png" imgSize="55%">
+		<SideBySide src="/images/projects/Hillen & Roosen/episch-model-h&r.gif" imgSize="55%">
 			<div class="maquette">
 				<h2>How we work</h2>
 				<h1>The process of art</h1>
