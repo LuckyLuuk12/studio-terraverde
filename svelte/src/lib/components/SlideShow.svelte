@@ -10,30 +10,30 @@
 
 	$: current = 0;
 	let autoSlideTimeout;
-	
+
 	function slide(to: number = current + 1) {
 		const imgs = document ? document.images : [];
-		if(to !== current) for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '0';
+		if (to !== current) for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '0';
 		if (auto && images.length > 5) {
 			clearTimeout(autoSlideTimeout);
 			autoSlideTimeout = setTimeout(() => autoSlide(current + 1), interval);
 		}
-		if(to === current) return;
+		if (to === current) return;
 		setTimeout(() => {
 			current = mod(to, images.length);
 			for (let i = 0; i < imgs.length; i++) imgs[i].style.opacity = '1';
 		}, 400);
 	}
-	
+
 	function autoSlide(to: number = current + 1) {
 		current = mod(to, images.length);
 		slide(mod(to, images.length));
 	}
-	
+
 	function mod(n: number, m: number) {
 		return ((n % m) + m) % m;
 	}
-	
+
 	onMount(() => {
 		if (auto && images.length > 5) {
 			autoSlideTimeout = setTimeout(autoSlide, interval);
@@ -41,16 +41,28 @@
 	});
 </script>
 
-<div class="slideshow" >
+<div class="slideshow">
 	<div class="images">
 		<div class="overlay" />
 		<div class="overlay" />
 		<div class="overlay" />
-		<img src={images[mod(current-2, images.length)]} alt="Slideshow image {mod(current-2, images.length)}">
-		<img src={images[mod(current-1, images.length)]} alt="Slideshow image {mod(current-1, images.length)}">
-		<img src={images[current]} alt="Slideshow image {current}">
-		<img src={images[mod(current+1, images.length)]} alt="Slideshow image {mod(current+1, images.length)}">
-		<img src={images[mod(current+2, images.length)]} alt="Slideshow image {mod(current+2, images.length)}">
+		<img
+			src={images[mod(current - 2, images.length)]}
+			alt="Slideshow image {mod(current - 2, images.length)}"
+		/>
+		<img
+			src={images[mod(current - 1, images.length)]}
+			alt="Slideshow image {mod(current - 1, images.length)}"
+		/>
+		<img src={images[current]} alt="Slideshow image {current}" />
+		<img
+			src={images[mod(current + 1, images.length)]}
+			alt="Slideshow image {mod(current + 1, images.length)}"
+		/>
+		<img
+			src={images[mod(current + 2, images.length)]}
+			alt="Slideshow image {mod(current + 2, images.length)}"
+		/>
 		<div class="overlay" />
 		<div class="overlay" />
 		<div class="overlay" />
@@ -90,7 +102,7 @@
 			flex-wrap: wrap;
 			width: 100%;
 			height: 100%;
-			
+
 			img {
 				transition: all 0.4s ease;
 				animation: flipIn 1.6s ease-in-out;
@@ -218,10 +230,18 @@
 			font-size: 2em;
 			cursor: pointer;
 			padding: 3rem 1rem;
-			text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+			text-shadow:
+				1px 1px black,
+				-1px -1px black,
+				1px -1px black,
+				-1px 1px black;
 			&:hover {
 				color: $light2;
-				text-shadow: 2px 2px 3px black, -2px -2px 3px black, 2px -2px 3px black, -2px 2px 3px black;
+				text-shadow:
+					2px 2px 3px black,
+					-2px -2px 3px black,
+					2px -2px 3px black,
+					-2px 2px 3px black;
 			}
 			&:first-of-type {
 				left: 0;
@@ -235,7 +255,7 @@
 			}
 		}
 	}
-	
+
 	@media (max-width: 900px) {
 		.slideshow {
 			.images {
@@ -245,7 +265,7 @@
 			}
 		}
 	}
-	
+
 	@media (max-width: 768px) {
 		.slideshow {
 			.images {
@@ -255,7 +275,7 @@
 			}
 		}
 	}
-	
+
 	@media (max-width: 480px) {
 		.slideshow {
 			.images {

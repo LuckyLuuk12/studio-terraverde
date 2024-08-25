@@ -1,11 +1,12 @@
 <script lang="ts">
-	export let languages: (string|number)[][] = [];
+	export let languages: (string | number)[][] = [];
 </script>
+
 <div class="languages">
 	{#each languages as [language, level], i}
 		<div class="language">
 			<h4>{language}</h4>
-			<div class="level" style="width: {level*10}%"></div>
+			<div class="level" style="width: {level * 10}%"></div>
 		</div>
 	{/each}
 </div>
@@ -28,7 +29,14 @@
 				margin: 1rem 0 0.5rem 0;
 			}
 			.level {
-				background: linear-gradient(90deg, $accent2 0%, $accent2 45%, lighten($accent2, 10%) 50%, $accent2 55%, $accent2 100%);
+				background: linear-gradient(
+					90deg,
+					$accent2 0%,
+					$accent2 45%,
+					lighten($accent2, 10%) 50%,
+					$accent2 55%,
+					$accent2 100%
+				);
 				height: 1rem;
 				border-radius: 1rem;
 				background-size: 200% 100%;
@@ -37,7 +45,7 @@
 			}
 		}
 	}
-	
+
 	@keyframes pulse {
 		0% {
 			background-position: 100% 0;

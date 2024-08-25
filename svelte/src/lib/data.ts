@@ -5,42 +5,50 @@ import type { ProjectCategory, Project } from '$lib/types';
 const categoryData: ProjectCategory[] = [
 	{
 		title: 'Working on now',
-		content: 'As full-time passionate dedicated architect, I am always busy working on my next great creation. Check out the projects I am currently working on.',
+		content:
+			'As full-time passionate dedicated architect, I am always busy working on my next great creation. Check out the projects I am currently working on.',
 		image: '/images/categories/cat0.jpg'
 	},
 	{
 		title: 'Schools',
-		content: 'Schools are so important, they bring the future. That\'s why I am happy I could work on some of them. Check them out here',
+		content:
+			"Schools are so important, they bring the future. That's why I am happy I could work on some of them. Check them out here",
 		image: '/images/categories/cat1.jpg'
 	},
 	{
 		title: 'Offices',
-		content: 'Offices, as well, are a very important aspect of our lives. Check out the offices I have worked on.',
+		content:
+			'Offices, as well, are a very important aspect of our lives. Check out the offices I have worked on.',
 		image: '/images/categories/cat2.jpg'
 	},
 	{
 		title: 'Cultural Projects',
-		content: 'Cultural projects are very important for the (local) community. Check out the cultural projects I have worked on.',
+		content:
+			'Cultural projects are very important for the (local) community. Check out the cultural projects I have worked on.',
 		image: '/images/categories/cat3.jpg'
 	},
 	{
 		title: 'Student Guidance',
-		content: 'I also guided some students in their projects. See how they performed, what they did and how I helped them.',
+		content:
+			'I also guided some students in their projects. See how they performed, what they did and how I helped them.',
 		image: '/images/categories/cat4.png'
 	},
 	{
 		title: 'Local Authority Projects',
-		content: 'I also worked on some projects for which the local authority personally asked me. Check them out here.',
+		content:
+			'I also worked on some projects for which the local authority personally asked me. Check them out here.',
 		image: '/images/categories/cat5.jpg'
 	},
 	{
 		title: 'Other projects',
-		content: 'I have even more projects which are too special to put into a category. Check them out here.',
+		content:
+			'I have even more projects which are too special to put into a category. Check them out here.',
 		image: '/images/categories/cat6.jpg'
 	},
 	{
 		title: 'Unrealized projects',
-		content: 'Sadly, not all projects are realized. Check out the projects that never saw the light of day.',
+		content:
+			'Sadly, not all projects are realized. Check out the projects that never saw the light of day.',
 		image: '/images/categories/cat7.png'
 	}
 ];
@@ -59,9 +67,12 @@ const slides: { image: string; title?: string; content?: string }[] = [
 	{ image: '/images/projects/Hillen & Roosen/Gevel Hillen & Roosen.jpg' },
 	{ image: '/images/projects/Redstone/restone 02.jpg' },
 	{ image: '/images/projects/OBS Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten.jpg' },
-	{ image: '/images/projects/Supersnack/gevelaanzicht ontworpen horeca gelegenheid Supersnack uit 2008.jpg' },
+	{
+		image:
+			'/images/projects/Supersnack/gevelaanzicht ontworpen horeca gelegenheid Supersnack uit 2008.jpg'
+	},
 	{ image: '/images/projects/Kwartslag/voorgevel.jpg' },
-	{ image: '/images/projects/4 Villa\'s Lelystad/Picture11.png' }
+	{ image: "/images/projects/4 Villa's Lelystad/Picture11.png" }
 ];
 
 export const projectData: Project[] = [

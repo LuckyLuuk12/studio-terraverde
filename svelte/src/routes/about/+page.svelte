@@ -3,25 +3,25 @@
 	import LanguageCard from '$lib/components/about/LanguageCard.svelte';
 	import StudyCard from '$lib/components/about/StudyCard.svelte';
 
-	const txt = 'Project manager with broad experience in construction and real estate management. ' +
+	const txt =
+		'Project manager with broad experience in construction and real estate management. ' +
 		'An architectural background that perfectly fits to closely manage projects of architectural ' +
 		'importance. From the start of the construction process its delivery. Team player. ' +
 		'Curious and observant with natural helicopter view.';
-	
+
 	const studies = [
 		['Projectmanagement Open Universiteit', '1995-1996'],
 		['University of Arts Utrecht - Faculteit Architectuur', '1982-1988'],
 		['Instituut voor Architectuur te Orléans (Frankrijk)', '1980-1982'],
 		['MBO diploma', '1971-1976']
 	];
-	
+
 	const links = [
 		'https://www.ou.nl/opleiding?opleiding=Projectmanagement',
 		'https://www.hku.nl/',
 		'https://www.univ-orleans.fr/',
 		'https://www.roc.nl/'
 	];
-	
 </script>
 
 <svelte:head>
@@ -30,10 +30,18 @@
 </svelte:head>
 <main>
 	<ProfileCard name="Marchel van Oosten" src="/images/marchel.png" {txt} />
-	<LanguageCard languages={[['Dutch', 10], ['English', 8.5], ['German', 7], ['French', 6,7], ['Danish', 5], ['Italian', 5]]} />
+	<LanguageCard
+		languages={[
+			['Dutch', 10],
+			['English', 8.5],
+			['German', 7],
+			['French', 6, 7],
+			['Danish', 5],
+			['Italian', 5]
+		]}
+	/>
 	<StudyCard {studies} {links} />
 </main>
-
 
 <style lang="scss">
 	main {

@@ -6,7 +6,7 @@ def get_files_from_directory(directory):
     files = []
     for root, _, filenames in os.walk(directory):
         for filename in filenames:
-            if filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp')):
+            if filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
                 files.append(os.path.join(root, filename))
     return files
 

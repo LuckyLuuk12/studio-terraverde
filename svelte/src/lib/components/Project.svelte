@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Project } from '$lib/types.d';
 	import SlideShow from '$lib/components/SlideShow.svelte';
-	
+
 	export let project: Project;
 </script>
 
@@ -10,7 +10,7 @@
 		<h1>{project.title}</h1>
 		<p>{project.description}</p>
 	</div>
-	
+
 	<div class="categories-box">
 		<div class="categories">
 			{#each project.categories.map((c) => c.title) as category, i}
@@ -19,7 +19,7 @@
 			{/each}
 		</div>
 	</div>
-	
+
 	{#if project.images.length > 0}
 		<SlideShow images={project.images} />
 	{/if}
@@ -40,8 +40,12 @@
 		background-color: rgba($light2, 0.2);
 		padding: 1rem;
 		border-radius: 1rem;
-		h1 { margin-bottom: 1rem; }
-		p { color: lighten($light3, 20%); }
+		h1 {
+			margin-bottom: 1rem;
+		}
+		p {
+			color: lighten($light3, 20%);
+		}
 	}
 	.categories-box {
 		cursor: pointer;
@@ -59,11 +63,11 @@
 			width: 22%;
 		}
 	}
-	
+
 	.categories {
 		margin: 0.5rem;
 	}
-	
+
 	@keyframes gradientAnimation {
 		0% {
 			background-position: 0 0;

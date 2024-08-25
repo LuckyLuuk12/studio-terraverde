@@ -15,13 +15,13 @@
 		{#if txt}
 			<h6>{txt}</h6>
 		{/if}
-		<button on:click={() => window.location.href = '/contact'}>Contact</button>
+		<button on:click={() => (window.location.href = '/contact')}>Contact</button>
 	</div>
 </div>
 
 <style lang="scss">
 	@import '../../colors';
-	
+
 	.profile {
 		background-color: rgba($light3, 1);
 		display: flex;
@@ -49,7 +49,7 @@
 			border-top-right-radius: 1rem;
 			transition: transform 0.5s ease; // Smooth transition
 		}
-		
+
 		.text-container {
 			background-color: $light1;
 			padding: 1rem;
@@ -59,17 +59,17 @@
 			max-height: 50%;
 			text-align: center;
 			overflow: hidden;
-			
+
 			h4 {
 				margin: 0;
 				color: $dark-brown;
 			}
-			
+
 			h6 {
 				margin: 0.5rem 0;
 				color: $dark-brown;
 			}
-			
+
 			button {
 				margin: 1rem;
 				padding: 0.5rem 1rem;
@@ -80,11 +80,11 @@
 				cursor: pointer;
 				transition: background 0.3s ease;
 				background-size: 200% 200%;
-				
+
 				&:hover {
 					animation: gradientMove 3s linear infinite;
 				}
-				
+
 				@keyframes gradientMove {
 					0% {
 						background-position: 0 50%;
