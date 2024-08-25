@@ -67,10 +67,11 @@ export const cats: ProjectCategory[] = categoryData.map((cat) => {
 const slides: { image: string; title?: string; content?: string }[] = [
 	{ image: '/images/projects/Hillen & Roosen/Gevel Hillen & Roosen.jpg' },
 	{ image: '/images/projects/Hoofdkantoor Redstone/restone 02.jpg' },
-	{ image: '/images/projects/OBS De Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten.jpg' },
 	{
-		image:
-			'/images/projects/Winkelcentrum De Boogaard/voorkant-1.PNG'
+		image: '/images/projects/OBS De Zevensprong/zijgevel Zevensprong met gekleurde bovenlichten.jpg'
+	},
+	{
+		image: '/images/projects/Winkelcentrum De Boogaard/voorkant-1.PNG'
 	},
 	{ image: '/images/projects/De Kwartslag/voorgevel.jpg' },
 	{ image: "/images/projects/Villa's Lelystad/Lelystad overhoeks opname.jpg" }
@@ -326,7 +327,6 @@ export const projectData: Project[] = [
 		location: '',
 		other: [{}]
 	}
-
 ];
 
 export const categories: Writable<ProjectCategory[]> = writable<ProjectCategory[]>(cats);

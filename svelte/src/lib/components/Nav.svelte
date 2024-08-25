@@ -1,28 +1,27 @@
 <script lang="ts">
-import { categories } from '$lib/data';
-import { onMount } from 'svelte';
+	import { categories } from '$lib/data';
+	import { onMount } from 'svelte';
 
-let nav: HTMLElement;
+	let nav: HTMLElement;
 
-function toggleFolded() {
-	nav.style.display = nav?.style?.display === 'none' || !nav.style.display ? 'flex' : 'none';
-}
+	function toggleFolded() {
+		nav.style.display = nav?.style?.display === 'none' || !nav.style.display ? 'flex' : 'none';
+	}
 
-onMount(() => {
-	window.addEventListener('resize', () => {
-		if (nav && window.innerWidth > 800) {
-			nav.style.display = 'flex';
-		}
+	onMount(() => {
+		window.addEventListener('resize', () => {
+			if (nav && window.innerWidth > 800) {
+				nav.style.display = 'flex';
+			}
+		});
 	});
-});
-
 </script>
 
 <header>
 	<h1>Terra Verde</h1>
-	<h5>Studio voor<br>Architectonische<br>Oplossingen</h5>
+	<h5>Studio voor<br />Architectonische<br />Oplossingen</h5>
 	<h6>
-		<a href="mailto:vanoosten.marchel@gmail.com" >vanoosten.marchel@gmail.com</a>
+		<a href="mailto:vanoosten.marchel@gmail.com">vanoosten.marchel@gmail.com</a>
 		<i class="fas fa-envelope" />
 	</h6>
 </header>
@@ -52,25 +51,26 @@ onMount(() => {
 <footer>
 	<div>
 		<h3>Also see</h3>
-		<a href="/work">Projects I worked on</a><br>
-		<a href="/references">References others wrote</a><br>
+		<a href="/work">Projects I worked on</a><br />
+		<a href="/references">References others wrote</a><br />
 		<a href="https://www.linkedin.com/in/marchelvanoosten/?originalSubdomain=nl">My LinkedIn</a>
 	</div>
 	<div>
 		<h3>Contact</h3>
-		<p>Terra Verde 7201 LA <br> Zutphen</p>
+		<p>Terra Verde 7201 LA <br /> Zutphen</p>
 		<p>Tel: +31 6 23538976</p>
 		<a href="mailto:vanoosten.marchel@gmail.com">vanoosten.marchel@gmail.com</a>
 	</div>
 	<div>
 		<h3>Legal:</h3>
-		<a href="https://www.kvk.nl/bestellen/#/71738916000039903796">KVK</a><br>
+		<a href="https://www.kvk.nl/bestellen/#/71738916000039903796">KVK</a><br />
 		<a href="mailto:luckyluuk02@gmail.com">Report site issues</a>
 	</div>
 </footer>
+
 <style lang="scss">
 	@import '../colors';
-	
+
 	header {
 		display: flex;
 		align-items: center;
@@ -113,7 +113,9 @@ onMount(() => {
 			background-color: $light2;
 			border: none;
 			z-index: 600;
-			transition: transform 0.4s ease, opacity 0s ease;
+			transition:
+				transform 0.4s ease,
+				opacity 0s ease;
 		}
 		input:checked ~ hr:nth-of-type(1) {
 			transform: translateY(11px) rotate(-45deg);
@@ -166,7 +168,8 @@ onMount(() => {
 				border-radius: 0 0 0.5rem 0.5rem;
 				background: $light1;
 			}
-			&:hover .dropdown-content, &:hover .dropdown-content {
+			&:hover .dropdown-content,
+			&:hover .dropdown-content {
 				display: flex;
 			}
 		}
@@ -197,7 +200,6 @@ onMount(() => {
 				}
 			}
 		}
-		
 	}
 	.page {
 		z-index: 1;
@@ -217,15 +219,15 @@ onMount(() => {
 			color: rgba($accent1, 0.5);
 			margin-bottom: 1rem;
 		}
-		p, a {
+		p,
+		a {
 			color: $light1;
 			padding: 0.25rem 0;
 		}
 	}
-	
+
 	@media (max-width: 800px) {
 		header {
-			
 			h1 {
 				min-width: fit-content;
 				padding: 0 1rem;
@@ -243,7 +245,8 @@ onMount(() => {
 			align-items: center;
 			height: 96vh;
 			.dropdown {
-				&:hover .dropdown-content, &:hover .dropdown-content {
+				&:hover .dropdown-content,
+				&:hover .dropdown-content {
 					display: none;
 				}
 			}
@@ -252,6 +255,5 @@ onMount(() => {
 			grid-template: 1fr 1fr 1fr / 1fr;
 			height: fit-content;
 		}
-		
 	}
 </style>

@@ -15,7 +15,6 @@
 </svelte:head>
 
 <div class="content">
-	
 	<div class="full-page">
 		<SideBySide src="/images/projects/Hillen & Roosen/episch-model-h&r.gif" imgSize="65%">
 			<div class="maquette">
