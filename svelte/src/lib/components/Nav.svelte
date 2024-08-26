@@ -12,11 +12,8 @@
 
 	onMount(() => {
 		window.addEventListener('resize', () => {
-			if (nav && window.innerWidth > 800) {
-				nav.style.display = 'flex';
-			} else if(nav) {
-				nav.style.display = toggled ? 'flex' : 'none';
-			}
+			if (!nav) return;
+			nav.style.display = toggled || window.innerWidth > 800 ? 'flex' : 'none';
 		});
 	});
 </script>
