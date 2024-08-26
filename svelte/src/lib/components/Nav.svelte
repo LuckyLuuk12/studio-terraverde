@@ -3,15 +3,19 @@
 	import { onMount } from 'svelte';
 
 	let nav: HTMLElement;
-
+	let toggled: boolean = false;
+	
 	function toggleFolded() {
 		nav.style.display = nav?.style?.display === 'none' || !nav.style.display ? 'flex' : 'none';
+		toggled = !toggled;
 	}
 
 	onMount(() => {
 		window.addEventListener('resize', () => {
 			if (nav && window.innerWidth > 800) {
 				nav.style.display = 'flex';
+			} else if(nav) {
+				nav.style.display = toggled ? 'flex' : 'none';
 			}
 		});
 	});
