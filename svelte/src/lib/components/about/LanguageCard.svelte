@@ -31,11 +31,11 @@
 			.level {
 				background: linear-gradient(
 					90deg,
-					$green1 0%,
-					$green1 45%,
-					lighten($green1, 10%) 50%,
-					$green1 55%,
-					$green1 100%
+					$lime2 0%,
+					$lime2 45%,
+					lighten($lime2, 10%) 50%,
+					$lime2 55%,
+					$lime2 100%
 				);
 				height: 1rem;
 				border-radius: 1rem;
