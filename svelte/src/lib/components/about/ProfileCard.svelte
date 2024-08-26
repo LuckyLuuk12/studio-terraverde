@@ -62,18 +62,18 @@
 
 			h4 {
 				margin: 0;
-				color: $dark-brown;
+				color: $brown2;
 			}
 
 			h6 {
 				margin: 0.5rem 0;
-				color: $dark-brown;
+				color: $brown2;
 			}
 
 			button {
 				margin: 1rem;
 				padding: 0.5rem 1rem;
-				background: linear-gradient(135deg, darken($accent1, 10%) 0%, darken($accent1, 40%) 100%);
+				background: linear-gradient(135deg, darken($lime1, 10%) 0%, darken($lime1, 40%) 100%);
 				color: white;
 				border: none;
 				border-radius: 0.5rem;

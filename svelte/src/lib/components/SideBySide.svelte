@@ -2,9 +2,10 @@
 	export let textRight: boolean = false;
 	export let src: string | null = null;
 	export let imgSize: string = '50%';
+	export let style: string = '';
 </script>
 
-<div class="outer">
+<div class="outer" {style}>
 	{#if textRight}
 		<img {src} alt="" style={`min-width: ${imgSize}`} />
 		<div class="inner"><slot /></div>
@@ -18,13 +19,13 @@
 	@import '../colors';
 	.outer {
 		width: 100%;
-		min-height: 85vh;
-		max-height: 100vh;
 		display: flex;
 		.inner {
+			z-index: 2;
 		}
 		img {
 			object-fit: cover;
+			z-index: 1;
 		}
 	}
 </style>

@@ -49,22 +49,33 @@
 	<slot />
 </div>
 <footer>
-	<div>
-		<h3>Also see</h3>
-		<a href="/work">Projects I worked on</a><br />
-		<a href="/references">References others wrote</a><br />
-		<a href="https://www.linkedin.com/in/marchelvanoosten/?originalSubdomain=nl">My LinkedIn</a>
+	<div class="grid">
+		<div>
+			<img src="/images/favicon.png" alt="Terra Verde logo" />
+			<h6>Studio Terra Verde</h6>
+			<p>Beukerstraat 23-a <br>7201 LA, Zutphen <br> The Netherlands</p>
+			<p><i class="fas fa-phone" /> +31 6 23538976</p>
+			<a href="mailto:vanoosten.marchel@gmail.com">
+				<i class="fas fa-envelope" />
+				vanoosten.marchel@gmail.com
+			</a>
+		</div>
+		<div>
+			<h3>Useful links</h3>
+			<a href="/work">Projects I worked on</a>
+			<a href="/references">References others wrote</a>
+			<a href="https://www.linkedin.com/in/marchelvanoosten/?originalSubdomain=nl">My LinkedIn</a>
+		</div>
+		
+		<div>
+			<h3>Legal:</h3>
+			<a href="https://www.kvk.nl/bestellen/#/71738916000039903796">KVK</a><br>
+			<a href="mailto:luckyluuk02@gmail.com"><i class="fas fa-bug" /> Report site issues</a>
+		</div>
 	</div>
 	<div>
-		<h3>Contact</h3>
-		<p>Terra Verde 7201 LA <br /> Zutphen</p>
-		<p>Tel: +31 6 23538976</p>
-		<a href="mailto:vanoosten.marchel@gmail.com">vanoosten.marchel@gmail.com</a>
-	</div>
-	<div>
-		<h3>Legal:</h3>
-		<a href="https://www.kvk.nl/bestellen/#/71738916000039903796">KVK</a><br />
-		<a href="mailto:luckyluuk02@gmail.com">Report site issues</a>
+		<hr>
+		Studio Terra Verde &copy; 2024
 	</div>
 </footer>
 
@@ -75,13 +86,13 @@
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
-		background-color: lighten($light3, 20%);
+		background-color: $green2;
 		color: $light1;
-		box-shadow: 0 0.5rem 1rem rgba($light3, 0.2);
+		box-shadow: 0 0.5rem 1rem rgba($green2, 0.2);
 		height: 4rem;
 		z-index: 1000;
 		h1 {
-			color: $accent2;
+			color: $lime1;
 			padding: 1rem 0 1rem 20rem;
 		}
 		h6 {
@@ -187,7 +198,7 @@
 				transition: all 0.3s ease;
 			}
 			&:hover {
-				color: $accent2;
+				color: $green1;
 				&::after {
 					content: '';
 					position: absolute;
@@ -195,7 +206,7 @@
 					left: 0;
 					width: 100%;
 					height: 0.15rem;
-					background-color: $accent2;
+					background-color: $green1;
 					transition: all 0.3s ease;
 				}
 			}
@@ -206,23 +217,67 @@
 		position: relative;
 	}
 	footer {
-		display: grid;
-		grid-template: 1fr / 1fr 1fr 1fr;
-		height: 16rem;
-		padding: 2rem 10rem;
-		background-color: lighten($light3, 20%);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: $green2;
 		color: $light1;
-		text-align: center;
-		box-shadow: 0 -0.5rem 1rem rgba($light3, 0.2);
-		z-index: 1000;
+		font-size: 0.8rem;
+		padding: 5% 20%;
+		height: 60vh;
+		.grid {
+			height: 100%;
+			display: grid;
+			grid-template: 1fr / 1fr 1fr 1fr 1fr;
+			gap: 2rem;
+			& > * {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				&:first-child {
+					padding-bottom: 4rem;
+					justify-content: space-around;
+				}
+			}
+			
+		}
+		h6 {
+			text-align: center;
+		}
 		h3 {
-			color: rgba($accent1, 0.5);
 			margin-bottom: 1rem;
 		}
-		p,
-		a {
+		img {
+			width: 25%;
+			margin: 0 50%;
+			transform: translateX(-50%);
+		}
+		hr {
 			color: $light1;
-			padding: 0.25rem 0;
+			border-color: $light1;
+			margin: 1rem 0;
+		}
+		a {
+			position: relative;
+			width: 100%;
+			color: $light1;
+			margin: 0.5rem 0;
+			&:not([href^='mailto']) {
+				&:hover { color: $light2; }
+				&::before {
+					content: '> ';
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: -0.25rem;
+					left: 0;
+					width: 100%;
+					height: 0.05rem;
+					background-color: rgba($light1, 0.75);
+					transition: all 0.3s ease;
+				}
+			}
 		}
 	}
 

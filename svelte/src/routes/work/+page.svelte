@@ -84,7 +84,7 @@
 			text-align: center;
 			width: 100%;
 			a {
-				color: $dark-brown;
+				color: $brown2;
 				text-decoration: none;
 			}
 		}

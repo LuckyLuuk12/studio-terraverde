@@ -32,13 +32,13 @@
 		.title {
 			padding: 1rem;
 			text-shadow:
-				0 1px $dark-brown,
-				0 -1px $dark-brown,
-				1px 0 $dark-brown,
-				-1px 0 $dark-brown;
+				0 1px $brown2,
+				0 -1px $brown2,
+				1px 0 $brown2,
+				-1px 0 $brown2;
 		}
 		.content {
-			background: rgba($light-brown, 0.7);
+			background: rgba($brown1, 0.7);
 			color: lighten($light3, 10%);
 			position: absolute;
 			padding: 0.5rem;
@@ -46,7 +46,7 @@
 			bottom: 0;
 			min-height: 30%;
 			max-height: 30%;
-			border-top: 1px solid rgba($dark-brown, 0.15);
+			border-top: 1px solid rgba($brown2, 0.15);
 			overflow: clip;
 			word-wrap: break-word;
 		}

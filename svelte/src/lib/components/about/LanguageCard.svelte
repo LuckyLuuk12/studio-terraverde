@@ -31,11 +31,11 @@
 			.level {
 				background: linear-gradient(
 					90deg,
-					$accent2 0%,
-					$accent2 45%,
-					lighten($accent2, 10%) 50%,
-					$accent2 55%,
-					$accent2 100%
+					$green1 0%,
+					$green1 45%,
+					lighten($green1, 10%) 50%,
+					$green1 55%,
+					$green1 100%
 				);
 				height: 1rem;
 				border-radius: 1rem;

@@ -122,46 +122,46 @@
 				width: 100%;
 				height: 10%;
 				&:nth-of-type(1) {
-					top: 0;
+					top: -1px;
 					left: 0;
 					z-index: 10;
 					background-color: $light1;
 					clip-path: polygon(0 0, 100% 0, 50% 80%);
 				}
 				&:nth-of-type(2) {
-					top: 0;
+					top: -1px;
 					left: 0;
 					z-index: 5;
-					background-color: rgba($light1, 0.2);
+					background-color: rgba($light1, 0.3);
 					clip-path: polygon(0 0, 0 40%, 50% 80%, 100% 40%, 100% 0);
 				}
 				&:nth-of-type(3) {
-					top: 0;
+					top: -1px;
 					left: 0;
 					z-index: 2;
-					background-color: rgba($light1, 0.05);
+					background-color: rgba($light1, 0.1);
 					clip-path: polygon(0 0, 0 60%, 50% 80%, 100% 60%, 100% 0);
 				}
 				// And now upside down the same for the bottom
 				&:nth-of-type(4) {
-					bottom: 0;
+					bottom: -1px;
 					right: 0;
 					z-index: 10;
 					background-color: $light1;
 					clip-path: polygon(0 100%, 100% 100%, 50% 20%);
 				}
 				&:nth-of-type(5) {
-					bottom: 0;
+					bottom: -1px;
 					right: 0;
 					z-index: 5;
-					background-color: rgba($light1, 0.2);
+					background-color: rgba($light1, 0.3);
 					clip-path: polygon(0 100%, 0 60%, 50% 20%, 100% 60%, 100% 100%);
 				}
 				&:nth-of-type(6) {
-					bottom: 0;
+					bottom: -1px;
 					right: 0;
 					z-index: 2;
-					background-color: rgba($light1, 0.05);
+					background-color: rgba($light1, 0.1);
 					clip-path: polygon(0 100%, 0 40%, 50% 20%, 100% 40%, 100% 100%);
 				}
 			}
@@ -178,10 +178,10 @@
 			color: $light1;
 			font-size: 2rem;
 			text-shadow:
-				0 1px $dark-brown,
-				0 -1px $dark-brown,
-				1px 0 $dark-brown,
-				-1px 0 $dark-brown;
+				0 1px $brown2,
+				0 -1px $brown2,
+				1px 0 $brown2,
+				-1px 0 $brown2;
 		}
 		.content {
 			position: absolute;
@@ -191,7 +191,7 @@
 			padding: 1rem;
 			border-radius: 0.5rem;
 			font-size: 1.15rem;
-			color: $dark-brown;
+			color: $brown2;
 			background-color: rgba($light2, 0.2);
 		}
 		&:hover .dots {
@@ -214,10 +214,10 @@
 				margin: 0 0.125rem 1rem 0.125rem;
 				cursor: pointer;
 				&:hover {
-					background-color: rgba($light3, 0.2);
+					background-color: $green1;
 				}
 				&.current {
-					background-color: rgba($light3, 0.9);
+					background-color: $green2;
 				}
 			}
 		}

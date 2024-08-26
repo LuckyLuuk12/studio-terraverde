@@ -41,21 +41,21 @@
 			transition: all 0.3s ease;
 			cursor: pointer;
 			&:hover {
-				background: linear-gradient(135deg, rgba($accent1, 0.4) 0%, rgba($accent1, 0.2) 100%);
+				background: linear-gradient(135deg, rgba($lime1, 0.4) 0%, rgba($lime1, 0.2) 100%);
 				color: white;
 			}
 			h4 {
 				margin: 1rem 0 0.5rem 0;
 			}
 			h6 {
-				color: $accent2;
+				color: $green2;
 			}
 			.icon-link {
 				position: absolute;
 				right: 1rem;
 				top: 50%;
 				transform: translateY(-50%);
-				color: $accent2;
+				color: $green2;
 				text-decoration: none;
 				&:hover {
 					text-decoration: underline;
