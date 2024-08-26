@@ -18,15 +18,16 @@
 	<SideBySide
 		src="/images/projects/Hillen & Roosen/atrium 02.jpg"
 		imgSize="65%"
-		style="height: 80.5vh">
+		style="height: 80.5vh"
+	>
 		<div class="container green">
 			<div class="triangle lg1" />
 			<h3>How we work</h3>
 			<h1>The process of art</h1>
 			<p>
 				We examine every aspect of a construction project in all its complexity during the design
-				and planning phase. This foundation forms the basis for clear and logical decision-making
-				in close consultation with the client, ensuring quality throughout the entire construction
+				and planning phase. This foundation forms the basis for clear and logical decision-making in
+				close consultation with the client, ensuring quality throughout the entire construction
 				process and guaranteeing transparency and trust.
 			</p>
 			<a href="/work">View now</a>
@@ -34,17 +35,18 @@
 	</SideBySide>
 	<SideBySide
 		src="/images/projects/De Kwartslag/Gymlokaal in Rutten Gemeente Noordoostpolder.png"
-		imgSize="50%" textRight>
+		imgSize="50%"
+		textRight
+	>
 		<div class="container light">
 			<div class="triangle r2" />
 			<h3>What we do</h3>
 			<h1>Architectural solutions</h1>
 			<p>
-				At Terra Verde Studio for Architectural Solutions,
-				we employ a clear and systematic approach to designing and constructing buildings.
-				Founded in 1989 in Utrecht, our company focuses on residential and office projects.
-				Additionally, we work in the fields of education, culture, healthcare, sports, and
-				industrial buildings, covering both exterior and interior design.
+				At Terra Verde Studio for Architectural Solutions, we employ a clear and systematic approach
+				to designing and constructing buildings. Founded in 1989 in Utrecht, our company focuses on
+				residential and office projects. Additionally, we work in the fields of education, culture,
+				healthcare, sports, and industrial buildings, covering both exterior and interior design.
 			</p>
 			<a href="/about">Learn more</a>
 		</div>
@@ -64,10 +66,10 @@
 			<h1>Keeping & Improving</h1>
 			<p>
 				Sustainability is the most important contribution a building can make in terms of ecology,
-				economy, and cultural values. With this in mind, we construct our buildings to meet
-				a range of sustainability criteria in terms of resources and energy, quality,
-				and functional elements. Principles such as corporate social responsibility, efficiency,
-				resource conservation, and social acceptability play a crucial role in our design vision.
+				economy, and cultural values. With this in mind, we construct our buildings to meet a range
+				of sustainability criteria in terms of resources and energy, quality, and functional
+				elements. Principles such as corporate social responsibility, efficiency, resource
+				conservation, and social acceptability play a crucial role in our design vision.
 			</p>
 			<a href="/about">Questions?</a>
 		</div>
@@ -96,10 +98,18 @@
 			line-height: 1.5;
 			&.green {
 				background: $green1;
-				h3 { color: rgba($light3, 0.75); }
-				h1 { color: $light1; }
-				p { color: rgba($light1, 0.75); }
-				.triangle { background: $green1 !important; }
+				h3 {
+					color: rgba($light3, 0.75);
+				}
+				h1 {
+					color: $light1;
+				}
+				p {
+					color: rgba($light1, 0.75);
+				}
+				.triangle {
+					background: $green1 !important;
+				}
 				a {
 					color: $light1;
 					&::after {
@@ -114,14 +124,19 @@
 				}
 			}
 			&.light {
-				background: linear-gradient(175deg,
-					$light2 1%,
-					$light1 80%
-				);
-				.triangle { background: $light1 !important; }
-				h3 { color: rgba($green1, 0.75); }
-				h1 { color: $light3; }
-				p { color: rgba($light3, 0.4); }
+				background: linear-gradient(175deg, $light2 1%, $light1 80%);
+				.triangle {
+					background: $light1 !important;
+				}
+				h3 {
+					color: rgba($green1, 0.75);
+				}
+				h1 {
+					color: $light3;
+				}
+				p {
+					color: rgba($light3, 0.4);
+				}
 				a {
 					color: $light3;
 					&::after {
@@ -158,7 +173,11 @@
 					clip-path: polygon(70% 50%, 100% 100%, 100% 0);
 				}
 			}
-			h3, h1, p { margin-bottom: 2rem; }
+			h3,
+			h1,
+			p {
+				margin-bottom: 2rem;
+			}
 			a {
 				position: relative;
 				color: $light1;
@@ -185,7 +204,6 @@
 					}
 				}
 			}
-			
 		}
 	}
 </style>

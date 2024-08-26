@@ -4,7 +4,7 @@
 
 	let nav: HTMLElement;
 	let toggled: boolean = false;
-	
+
 	function toggleFolded() {
 		nav.style.display = nav?.style?.display === 'none' || !nav.style.display ? 'flex' : 'none';
 		toggled = !toggled;
@@ -54,7 +54,7 @@
 		<div>
 			<img src="/images/favicon.png" alt="Terra Verde logo" />
 			<h6>Studio Terra Verde</h6>
-			<p>Beukerstraat 23-a <br>7201 LA, Zutphen <br> The Netherlands</p>
+			<p>Beukerstraat 23-a <br />7201 LA, Zutphen <br /> The Netherlands</p>
 			<p><i class="fas fa-phone" /> +31 6 23538976</p>
 			<a href="mailto:vanoosten.marchel@gmail.com">
 				<i class="fas fa-envelope" />
@@ -67,15 +67,15 @@
 			<a href="/references">References others wrote</a>
 			<a href="https://www.linkedin.com/in/marchelvanoosten/?originalSubdomain=nl">My LinkedIn</a>
 		</div>
-		
+
 		<div>
 			<h3>Legal:</h3>
-			<a href="https://www.kvk.nl/bestellen/#/71738916000039903796">KVK</a><br>
+			<a href="https://www.kvk.nl/bestellen/#/71738916000039903796">KVK</a><br />
 			<a href="mailto:luckyluuk02@gmail.com"><i class="fas fa-bug" /> Report site issues</a>
 		</div>
 	</div>
 	<div>
-		<hr>
+		<hr />
 		Studio Terra Verde &copy; 2024
 	</div>
 </footer>
@@ -240,7 +240,6 @@
 					justify-content: space-around;
 				}
 			}
-			
 		}
 		h6 {
 			text-align: center;
@@ -264,7 +263,9 @@
 			color: $light1;
 			margin: 0.5rem 0;
 			&:not([href^='mailto']) {
-				&:hover { color: $light2; }
+				&:hover {
+					color: $light2;
+				}
 				&::before {
 					content: '> ';
 				}
