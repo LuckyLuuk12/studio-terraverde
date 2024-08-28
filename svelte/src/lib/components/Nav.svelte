@@ -94,10 +94,12 @@
 		z-index: 1000;
 		h1 {
 			color: $lime1;
+			font-size: 1.5rem;
 			padding: 1rem 0 1rem 20rem;
 		}
 		h6 {
 			margin-left: auto;
+			font-size: 0.8rem;
 			padding: 1rem 20rem 1rem 0;
 		}
 	}

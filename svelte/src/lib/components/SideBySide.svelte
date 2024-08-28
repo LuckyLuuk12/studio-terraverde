@@ -28,4 +28,15 @@
 			z-index: 1;
 		}
 	}
+	@media (max-width: 800px) {
+		.outer {
+			flex-direction: column;
+			.inner {
+				order: 1;
+			}
+			img {
+				order: 2;
+			}
+		}
+	}
 </style>

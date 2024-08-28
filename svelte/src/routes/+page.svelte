@@ -71,7 +71,7 @@
 				elements. Principles such as corporate social responsibility, efficiency, resource
 				conservation, and social acceptability play a crucial role in our design vision.
 			</p>
-			<a href="/about">Questions?</a>
+			<a href="/about">Curious now?</a>
 		</div>
 	</SideBySide>
 	<div class="gap" />
