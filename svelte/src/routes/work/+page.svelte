@@ -27,7 +27,7 @@
 	<meta name="description" content="My previous work" />
 </svelte:head>
 
-<div class="content">
+<div class="works">
 	{#if !selectedCategory && !selectedProject}
 		<h3>My work</h3>
 		<span>
@@ -76,7 +76,7 @@
 
 <style lang="scss">
 	@import '$lib/colors';
-	.content {
+	.works {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
