@@ -37,7 +37,6 @@
 	}
 	.title-description-box {
 		text-align: center;
-		background-color: rgba($light2, 0.2);
 		padding: 1rem;
 		border-radius: 1rem;
 		h1 {
@@ -57,7 +56,7 @@
 		padding: 1rem;
 		border-top-left-radius: 1rem;
 		border-bottom-left-radius: 1rem;
-		transition: width 0.5s ease;
+		transition: all 0.5s ease;
 		animation: gradientAnimation 3s linear infinite;
 		&:hover {
 			width: 22%;

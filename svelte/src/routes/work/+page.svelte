@@ -77,6 +77,7 @@
 <style lang="scss">
 	@import '$lib/colors';
 	.works {
+		margin-top: 2.5rem;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
