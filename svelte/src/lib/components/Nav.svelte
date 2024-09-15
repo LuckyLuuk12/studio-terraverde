@@ -93,14 +93,19 @@
 		height: 4rem;
 		z-index: 1000;
 		h1 {
+			min-width: fit-content;
 			color: $lime1;
 			font-size: 1.5rem;
-			padding: 1rem 0 1rem 20rem;
+			padding: 1rem 0 1rem 10%;
+		}
+		h5 {
+			font-size: 0.7rem;
+			margin-right: calc(1rem + 35px);
 		}
 		h6 {
 			margin-left: auto;
 			font-size: 0.8rem;
-			padding: 1rem 20rem 1rem 0;
+			padding: 1rem 10% 1rem 0;
 		}
 	}
 	.hamburger {
@@ -222,7 +227,6 @@
 	footer {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		background: $green2;
 		color: $light1;
 		font-size: 0.8rem;
@@ -231,7 +235,7 @@
 		.grid {
 			height: 100%;
 			display: grid;
-			grid-template: 1fr / 1fr 1fr 1fr 1fr;
+			grid-template: 1fr / 1fr 1fr 1fr;
 			gap: 2rem;
 			& > * {
 				height: 100%;
@@ -287,9 +291,9 @@
 
 	@media (max-width: 800px) {
 		header {
+			height: fit-content(4rem);
 			h1 {
-				min-width: fit-content;
-				padding: 0 1rem;
+				padding: 0 0 0 1rem;
 			}
 			h6 {
 				display: none;
@@ -311,8 +315,12 @@
 			}
 		}
 		footer {
-			grid-template: 1fr 1fr 1fr / 1fr;
 			height: fit-content;
+			.grid {
+				grid-template: 1fr 1fr 1fr / 1fr;
+				height: fit-content;
+				gap: 0;
+			}
 		}
 	}
 </style>

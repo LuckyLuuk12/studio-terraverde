@@ -28,15 +28,19 @@
 			z-index: 1;
 		}
 	}
+	// When the screen is smaller place the inner content above the image
 	@media (max-width: 800px) {
 		.outer {
-			flex-direction: column;
+			position: relative;
 			.inner {
-				order: 1;
+				width: 100%;
 			}
 			img {
-				order: 2;
+				display: none;
 			}
+		}
+		:global(.triangle) {
+			display: none;
 		}
 	}
 </style>
