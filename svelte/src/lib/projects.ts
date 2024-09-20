@@ -106,9 +106,9 @@ export const projectData: Project[] = [{
 	'location': '',
 	'other': [{}]
 }, {
-	'title': 'Minderhoutschool',
-	'description': 'This is the project named Minderhoutschool',
-	'images': ['/images/projects/Minderhoutschool/berging.PNG', '/images/projects/Minderhoutschool/bouw-1.png', '/images/projects/Minderhoutschool/buiten-1.png', '/images/projects/Minderhoutschool/gevels-en-plattegronden.PNG', '/images/projects/Minderhoutschool/interieur-1.png', '/images/projects/Minderhoutschool/interieur-2.png', '/images/projects/Minderhoutschool/ir minderhoutschool uitbreidning.jpg', '/images/projects/Minderhoutschool/model-1.png', '/images/projects/Minderhoutschool/plaatsing-raamkozijn.png', '/images/projects/Minderhoutschool/raampartij in gevel.jpg', '/images/projects/Minderhoutschool/uitbreiding ir. Minderhoutschool te Tollebeek.png', '/images/projects/Minderhoutschool/uitbreiding.PNG', '/images/projects/Minderhoutschool/voorgevel 02.jpg', '/images/projects/Minderhoutschool/voorgevel.jpg'],
+	'title': 'Minderhoudschool',
+	'description': 'This is the project named Minderhoudschool',
+	'images': ['/images/projects/Minderhoudschool/berging.PNG', '/images/projects/Minderhoudschool/bouw-1.png', '/images/projects/Minderhoudschool/buiten-1.png', '/images/projects/Minderhoudschool/gevels-en-plattegronden.PNG', '/images/projects/Minderhoudschool/interieur-1.png', '/images/projects/Minderhoudschool/interieur-2.png', '/images/projects/Minderhoudschool/ir minderhoutschool uitbreidning.jpg', '/images/projects/Minderhoudschool/model-1.png', '/images/projects/Minderhoudschool/plaatsing-raamkozijn.png', '/images/projects/Minderhoudschool/raampartij in gevel.jpg', '/images/projects/Minderhoudschool/uitbreiding ir. Minderhoudschool te Tollebeek.png', '/images/projects/Minderhoudschool/uitbreiding.PNG', '/images/projects/Minderhoudschool/voorgevel 02.jpg', '/images/projects/Minderhoudschool/voorgevel.jpg'],
 	'categories': [],
 	'location': '',
 	'other': [{}]

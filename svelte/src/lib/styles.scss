@@ -57,7 +57,7 @@ a {
 				color: $light1;
 			}
 			p {
-				color: rgba($light1, 0.75);
+				color: rgba($light1, 0.80);
 			}
 			.triangle {
 				background: $green1 !important;
@@ -76,7 +76,7 @@ a {
 			}
 		}
 		&.light {
-			background: linear-gradient(175deg, $light2 1%, $light1 80%);
+			background: linear-gradient(245deg, $light2 1%, $light1 80%);
 			.triangle {
 				background: $light1 !important;
 			}
@@ -87,7 +87,7 @@ a {
 				color: $light3;
 			}
 			p {
-				color: rgba($light3, 0.4);
+				color: rgba($light3, 0.6);
 			}
 			a {
 				color: $light3;

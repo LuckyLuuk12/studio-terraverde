@@ -63,7 +63,7 @@ a:hover {
   color: #f1f3ef;
 }
 .content .container.green p {
-  color: rgba(241, 243, 239, 0.75);
+  color: rgba(241, 243, 239, 0.8);
 }
 .content .container.green .triangle {
   background: #8c9e6d !important;
@@ -81,7 +81,7 @@ a:hover {
   background-color: #d0d4cd;
 }
 .content .container.light {
-  background: linear-gradient(175deg, #d9dcd9 1%, #f1f3ef 80%);
+  background: linear-gradient(245deg, #d9dcd9 1%, #f1f3ef 80%);
 }
 .content .container.light .triangle {
   background: #f1f3ef !important;
@@ -93,7 +93,7 @@ a:hover {
   color: #373c33;
 }
 .content .container.light p {
-  color: rgba(55, 60, 51, 0.4);
+  color: rgba(55, 60, 51, 0.6);
 }
 .content .container.light a {
   color: #373c33;

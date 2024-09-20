@@ -21,6 +21,7 @@
 		width: 100%;
 		display: flex;
 		.inner {
+			width: 100%;
 			z-index: 2;
 		}
 		img {

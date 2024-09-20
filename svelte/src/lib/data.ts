@@ -104,14 +104,6 @@ export const projectData: Project[] = [
 		other: [{}]
 	},
 	{
-		title: 'De achterstraat te Alkmaar',
-		description: 'This is the project named De achterstraat te Alkmaar',
-		images: pData.filter((p) => p.title === 'De achterstraat te Alkmaar')[0]?.images ?? [],
-		categories: [cats[0]],
-		location: '',
-		other: [{}]
-	},
-	{
 		title: 'De Kwartslag',
 		description: 'This is the project named Kwartslag',
 		images: pData.filter((p) => p.title === 'De Kwartslag')[0]?.images ?? [],
@@ -200,9 +192,9 @@ export const projectData: Project[] = [
 		other: [{}]
 	},
 	{
-		title: 'Minderhoutschool',
-		description: 'This is the project named Minderhoutschool',
-		images: pData.filter((p) => p.title === 'Minderhoutschool')[0]?.images ?? [],
+		title: 'Minderhoudschool',
+		description: 'This is the project named Minderhoudschool',
+		images: pData.filter((p) => p.title === 'Minderhoudschool')[0]?.images ?? [],
 		categories: [cats[1]],
 		location: '',
 		other: [{}]
