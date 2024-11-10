@@ -23,6 +23,7 @@
 		position: relative;
 		height: 30rem;
 		width: 20rem;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		img {
 			position: absolute;
 			z-index: -1;
@@ -31,21 +32,21 @@
 		.title {
 			padding: 1rem;
 			text-shadow:
-				0 1px $dark-brown,
-				0 -1px $dark-brown,
-				1px 0 $dark-brown,
-				-1px 0 $dark-brown;
+				0 1px $brown2,
+				0 -1px $brown2,
+				1px 0 $brown2,
+				-1px 0 $brown2;
 		}
 		.content {
-			background: rgba($light-brown, 0.7);
-			color: $dark-brown;
+			background: rgba($brown1, 0.7);
+			color: lighten($light3, 10%);
 			position: absolute;
 			padding: 0.5rem;
 			width: 100%;
 			bottom: 0;
 			min-height: 30%;
 			max-height: 30%;
-			border-top: 1px solid rgba($dark-brown, 0.15);
+			border-top: 1px solid rgba($brown2, 0.15);
 			overflow: clip;
 			word-wrap: break-word;
 		}

@@ -6,10 +6,11 @@
 	z-index: 1;
 }
 html {
-	background-color: $light2;
+	background-color: $light1;
 	max-width: 100vw;
 	max-height: 100vh;
 	scrollbar-width: none;
+	//background-image: linear-gradient(135deg, $light2, lighten($light2, 10%));
 }
 button {
 	background-color: transparent;
@@ -25,8 +26,139 @@ body {
 }
 a {
 	text-decoration: none;
-	color: $accent1;
+	color: $lime1;
 	&:hover {
-		color: $accent2;
+		color: $lime2;
+	}
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	scroll-snap-type: both mandatory;
+	.gap {
+		height: 5rem;
+	}
+	.container {
+		position: relative;
+		height: 100%;
+		padding: 15%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: justify;
+		line-height: 1.5;
+		&.green {
+			background: $green1;
+			h3 {
+				color: rgba($light3, 0.75);
+			}
+			h1 {
+				color: $light1;
+			}
+			p {
+				color: rgba($light1, 0.80);
+			}
+			.triangle {
+				background: $green1 !important;
+			}
+			a {
+				color: $light1;
+				&::after {
+					background-color: $light1;
+				}
+				&:hover {
+					color: lighten($light3, 60%);
+					&::after {
+						background-color: lighten($light3, 60%);
+					}
+				}
+			}
+		}
+		&.light {
+			background: linear-gradient(245deg, $light2 1%, $light1 80%);
+			.triangle {
+				background: $light1 !important;
+			}
+			h3 {
+				color: rgba($green1, 0.75);
+			}
+			h1 {
+				color: $light3;
+			}
+			p {
+				color: rgba($light3, 0.6);
+			}
+			a {
+				color: $light3;
+				&::after {
+					background-color: $light3;
+				}
+				&:hover {
+					color: darken($green1, 10%);
+					&::after {
+						background-color: darken($green1, 10%);
+					}
+				}
+			}
+		}
+		.triangle {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			right: -80px;
+			top: 45%;
+			clip-path: polygon(0 0, 0 100%, 50% 50%);
+			background: transparent;
+			&.l2 {
+				top: 60%;
+				height: 140px;
+			}
+			&.r1 {
+				left: -79px;
+				clip-path: polygon(50% 50%, 100% 100%, 100% 0);
+			}
+			&.r2 {
+				top: 60%;
+				left: -79px;
+				height: 140px;
+				clip-path: polygon(70% 50%, 100% 100%, 100% 0);
+			}
+		}
+		h3,
+		h1,
+		p {
+			margin-bottom: 2rem;
+			i {
+				color: $light3;
+				font-size: 0.75rem;
+			}
+		}
+		a {
+			position: relative;
+			color: $light1;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -0.5rem;
+				left: 15%;
+				width: 70%;
+				height: 0.15rem;
+				background-color: $light1;
+				transition: all 0.3s ease;
+			}
+			&:hover {
+				color: lighten($light3, 60%);
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: -0.5rem;
+					left: 0;
+					width: 100%;
+					height: 0.15rem;
+					background-color: lighten($light3, 60%);
+				}
+			}
+		}
 	}
 }
