@@ -13,14 +13,16 @@
 		['Projectmanagement Open Universiteit', '1995-1996'],
 		['University of Arts Utrecht - Faculteit Architectuur', '1982-1988'],
 		['Instituut voor Architectuur te Orléans (Frankrijk)', '1980-1982'],
-		['MBO diploma', '1971-1976']
+		['MBO diploma', '1971-1976'],
+		['Download Curriculum Vitae', '']
 	];
 
 	const links = [
 		'https://www.ou.nl/opleiding?opleiding=Projectmanagement',
 		'https://www.hku.nl/',
 		'https://www.univ-orleans.fr/',
-		'https://www.roc.nl/'
+		'https://www.roc.nl/',
+		'/cv.pdf'
 	];
 </script>
 
