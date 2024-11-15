@@ -32,7 +32,7 @@ const categoryData: ProjectCategory[] = [
 		title: 'Student Guidance',
 		content:
 			'I also guided some students in their projects. See how they performed, what they did and how I helped them.',
-		image: '/images/categories/cat4.png'
+		image: '/images/categories/ncat4.bmp'
 	},
 	{
 		title: 'Local Authority Projects',

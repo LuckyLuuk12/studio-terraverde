@@ -36,8 +36,8 @@
 		languages={[
 			['Dutch', 10],
 			['English', 8.5],
+			['French', 8, 7],
 			['German', 7],
-			['French', 6, 7],
 			['Danish', 5],
 			['Italian', 5]
 		]}
